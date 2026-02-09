@@ -1,19 +1,19 @@
 author:
-  name: Dasein
-  role: PhD in Philosophy
-  bio:  Known for contributions to phenomenology, hermeneutics, and existentialism.
-  location: Munich, Germany
+  name: Miro Remias
+  role: Product Leader
+  bio: Bitcoiner, runner, father. 
+  location: EU
 
 social:
   - id: "x"
     label: "X"
-    href: "#_"
+    href: "https://x.com/mr21free"
   - id: "github"
     label: "GitHub"
-    href: "https://github.com/roicort"
+    href: "https://github.com/mr21free"
   - id: "linkedin"
     label: "Linkedin"
-    href: "#_"
+    href: "https://www.linkedin.com/in/miroremias/"
   - id: "email"
     label: "Email"
-    href: "mailto:"
+    href: "mailto:miro.remias@foremsec.com"

@@ -1,81 +1,46 @@
-# Dasein
-
-An Astro starter for personal blogs and portfolios with TypeScript, Tailwind CSS, Pagefind search, and theming.
-
-![](./public/SS-1.png)
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/roicort/dasein)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Froicort%2Fdasein)
-
-## Features
-
-- Blog with Markdown/MDX, featured post, and tag listings
-- Typed collections for posts, authors, and socials in [src/content.config.ts](src/content.config.ts)
-- Site-wide search via Pagefind with an accessible modal
-- SEO-ready: OpenGraph/Twitter, canonical links, and preloaded fonts in [src/components/BaseHead.astro](src/components/BaseHead.astro)
-- Themes `light/dark` with persistent toggle; debug toggle for layout borders
-- RSS (`/rss.xml`) and sitemap (`/sitemap-index.xml`) generated automatically
-
-
-<div style="display: flex; align-items: center; gap: 10px; width: 100%; margin-top: 20px;">
-    <img src="./public/SS-2.png" style="width: 180px; vertical-align: middle;" />
-    <img src="./public/SS-3.png" style="width: 180px; vertical-align: middle;" />
-    <img src="./public/SS-4.png" style="width: 180px; vertical-align: middle;" />
-</div>
-
-
-## Requirements
-- Bun
-- Astro@latest
-- Tailwdind CSS
-
-## Install & run
+# Astro Starter Kit: Basics
 
 ```sh
-# install dependencies
-bun install
-
-# start dev server
-bun run dev
-
-# production build
-bun run build
-
-# preview the build
-bun run preview
+npm create astro@latest -- --template basics
 ```
 
-## Content
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-- Posts: add `.md` or `.mdx` under `src/content/blog`. Schema validates `title`, `description`, `pubDate`, `updatedDate?`, `heroImage?`, `tags[]`.
-- Authors: `src/content/authors.yml`.
-- Socials: `src/content/socials.yml`.
+## 🚀 Project Structure
 
-Frontmatter example:
-```md
----
-title: "How we launch in 6 weeks"
-description: "End-to-end process for small teams."
-pubDate: 2024-12-12
-updatedDate: 2025-01-03
-tags: [delivery, process]
-heroImage: ../../assets/blog/ship.jpg
----
+Inside of your Astro project, you'll see the following folders and files:
+
+```text
+/
+├── public/
+│   └── favicon.svg
+├── src
+│   ├── assets
+│   │   └── astro.svg
+│   ├── components
+│   │   └── Welcome.astro
+│   ├── layouts
+│   │   └── Layout.astro
+│   └── pages
+│       └── index.astro
+└── package.json
 ```
 
-## Quick customization
+To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
 
-- Site name and description in [src/consts.ts](src/consts.ts).
-- Navigation and hero actions in [src/pages/index.astro](src/pages/index.astro).
-- Colors, type, and utilities in `src/styles/global.css`.
-- Key components: header with search and toggles ([src/components/Header.astro](src/components/Header.astro)), base layout ([src/layouts/BaseLayout.astro](src/layouts/BaseLayout.astro)).
+## 🧞 Commands
 
-## Available scripts
+All commands are run from the root of the project, from a terminal:
 
-- `npm run dev`: server on `localhost:4321` (Astro default).
-- `npm run build`: outputs `dist/` ready to deploy.
-- `npm run preview`: serves the built site locally.
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## Deploy
+## 👀 Want to learn more?
 
-Output is static HTML. Upload `dist/` to your platform of choice (Netlify, Vercel, Cloudflare Pages, S3+CDN). Set `BASE_URL` if you publish under a subpath.
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).

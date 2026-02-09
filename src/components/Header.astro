@@ -1,9 +1,7 @@
 ---
 import { getSite } from "../utils/consts";
 import HeaderLink from "./HeaderLink.astro";
-
 const site = await getSite();
-import SearchModal from "./SearchModal.astro";
 import ThemeToggle from "./ThemeToggle.astro";
 ---
 
@@ -26,24 +24,14 @@ import ThemeToggle from "./ThemeToggle.astro";
       <HeaderLink href="/projects">Projects</HeaderLink>
       <HeaderLink href="/about">About</HeaderLink>
 
-      <SearchModal class="text-xs 2xl:text-lg text-base-900 hover:text-base-500 font-bold uppercase" />
-
       <a
-        href="https://github.com/roicort/launchpad"
+        href="https://github.com/mr21free"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Visit the GitHub repository"
       >
         GitHub
       </a>
-      <button
-        id="debug-toggle"
-        aria-label="Toggle debug borders"
-        aria-pressed="false"
-        class="text-xs 2xl:text-lg text-base-900 hover:text-base-500 font-bold uppercase"
-      >
-        Debug
-      </button>
       <ThemeToggle class="text-xs 2xl:text-lg text-base-900 hover:text-base-500 font-bold uppercase" />
     </div>
 
@@ -55,9 +43,7 @@ import ThemeToggle from "./ThemeToggle.astro";
         <HeaderLink href="/blog">Blog</HeaderLink>
         <HeaderLink href="/projects">Projects</HeaderLink>
         <HeaderLink href="/about">About</HeaderLink>
-        <SearchModal class="text-xs 2xl:text-lg hover:text-base-500 font-bold uppercase" />
-        <a class="text-xs 2xl:text-lg hover:text-base-500 font-bold uppercase" href="https://github.com/roicort/launchpad" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <button id="mobile-debug" aria-label="Toggle debug borders" class="text-xs 2xl:text-lg hover:text-base-500 font-bold uppercase">Debug</button>
+        <a class="text-xs 2xl:text-lg hover:text-base-500 font-bold uppercase" href="https://github.com/mr21free" target="_blank" rel="noopener noreferrer">GitHub</a>
         <ThemeToggle class="text-xs 2xl:text-lg hover:text-base-500 font-bold uppercase" />
       </div>
     </div>
@@ -65,35 +51,12 @@ import ThemeToggle from "./ThemeToggle.astro";
 </header>
 
 <script is:inline>
-  const DEBUG_KEY = "debug-borders";
 
   // Cache selectors to avoid repeated DOM queries
   const navButton = document.getElementById("nav-toggle");
   const mobileNav = document.getElementById("mobile-nav");
   const mobileClose = document.getElementById("mobile-close");
-  const debugButton = document.getElementById("debug-toggle");
-  const mobileDebugButton = document.getElementById("mobile-debug");
   const navElement = document.querySelector("nav");
-
-  const applyDebug = (state) => {
-    const isOn = state === "on";
-    document.documentElement.dataset.debug = isOn ? "on" : "off";
-    if (debugButton) debugButton.setAttribute("aria-pressed", isOn ? "true" : "false");
-    if (mobileDebugButton) mobileDebugButton.setAttribute("aria-pressed", isOn ? "true" : "false");
-  };
-
-  const getPreferredDebug = () => {
-    const stored = localStorage.getItem(DEBUG_KEY);
-    if (stored === "on" || stored === "off") return stored;
-    return "off";
-  };
-
-  const toggleDebug = () => {
-    const current = document.documentElement.dataset.debug === "on" ? "on" : "off";
-    const next = current === "on" ? "off" : "on";
-    localStorage.setItem(DEBUG_KEY, next);
-    applyDebug(next);
-  };
 
   const applyNav = (state) => {
     const isOpen = state === "open";
@@ -120,11 +83,8 @@ import ThemeToggle from "./ThemeToggle.astro";
 
   const on = (el, evt, handler) => { if (!el) return; el.addEventListener(evt, handler); };
 
-  applyDebug(getPreferredDebug());
   applyNav("closed");
 
-  on(debugButton, "click", toggleDebug);
-  on(mobileDebugButton, "click", () => { toggleDebug(); closeNav(); });
   on(navButton, "click", () => toggleNav());
   on(mobileClose, "click", closeNav);
 
