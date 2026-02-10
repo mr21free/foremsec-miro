@@ -1,11 +1,11 @@
 ---
-title: Markdown Style Guide
+title: Article 2
 description: Here is a sample of some basic Markdown syntax that can be used
   when writing Markdown content in Astro.
 pubDate: 2026-01-15
 updatedDate: 2026-01-15
-heroImage: ../../assets/blog-placeholder-about.png
-author: rodrigo
+heroImage: ../../assets/blog-btc-node.png
+author: Miro Remias
 tags:
   - markdown
   - style
