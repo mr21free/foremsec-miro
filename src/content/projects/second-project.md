@@ -1,8 +1,8 @@
 ---
-title: RY3T - Heating houses with Bitcoin mining
+title: Bitcoin-Native Decentralized Storage Network
 description: ... TBD ...
 pubDate: 2026-01-10
-heroImage: ../../assets/blog-placeholder-about.png
+heroImage: ../../assets/blog-bitcoin-file-store-protocol.png
 updatedDate: 2026-01-12
 ---
 
