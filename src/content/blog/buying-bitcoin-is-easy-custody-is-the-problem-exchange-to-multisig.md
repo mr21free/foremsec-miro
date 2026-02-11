@@ -131,6 +131,9 @@ And for one of my keys:
 
 - An **air-gapped signer** (example: Coldcard Mk4) for a tighter security posture — “air-gapped” just means it can operate without a direct wired/wireless connection to your computer, so signing happens offline and only the signed data is transferred. Coldcard official site: https://coldcard.com/
 
+![Seedsigner](/images/posts/blog1_seedsigner-sq.jpeg)
+> Custom-built Seedsigner.
+
 ---
 
 ## The hard part isn’t multisig. It’s storing the secrets.
@@ -169,6 +172,9 @@ Now you’re not protecting one thing. You’re protecting a system.
 4. **Make long-term storage inconvenient on purpose**  
    If you’re storing long-term, the goal is not fast access—it’s survivability and discipline.
 
+![Seedsigner](/images/posts/blog1_steel_seed-sq.jpeg)
+> DIY steel seed.
+
 ---
 
 ## Why I use banks (even though I don’t “love banks”)
@@ -198,6 +204,9 @@ How to use it (high-level):
 - If the seal is broken or the number doesn’t match, assume compromise and rotate that key
 
 It’s a simple step, but it buys peace of mind: if someone at the bank (or anyone else who somehow accessed the box) looked inside, you’ll have a visible signal.
+
+![Seedsigner](/images/posts/blog1_tamper_envelope-sq.jpeg)
+> Tamper-evident sealed envelope.
 
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: (WIP) Bitcoin-Native Decentralized Storage Network
+title: (WIP) Freedom Journey (BOOK)
 description: ... TBD ...
 pubDate: 2026-01-10
 heroImage: ../../assets/blog-bitcoin-file-store-protocol.png

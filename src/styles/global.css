@@ -300,6 +300,22 @@
 	.post-article ol > li::marker {
 		color: color-mix(in oklab, var(--color-ink) 65%, transparent);
 	}
+	
+	/* default post images: responsive + centered */
+	.prose img {
+		display: block;
+		margin: 2rem auto;
+		max-width: 100%;
+		height: auto;
+		border-radius: 12px;
+	}
+
+  /* square “instagram-like” images using filename pattern */
+	.prose img[src*="-sq."] {
+		width: min(560px, 100%);
+		aspect-ratio: 1 / 1;
+		object-fit: cover;
+	}
 }
 
 @layer utilities {
