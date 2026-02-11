@@ -15,6 +15,7 @@
 	:root {
 		color-scheme: light;
 		background-color: var(--color-paper);
+		--link-color: #006ABA;
 		--grid-divisions: 20;
 		--grid-cell: calc(100vw / var(--grid-divisions));
 		--grid-cell-x: var(--grid-cell);
@@ -25,6 +26,7 @@
 
 	:root[data-theme="dark"] {
 		color-scheme: dark;
+		--link-color: #F7931A;
 		--color-ink: #f5f5f5;
 		--color-muted: color-mix(in oklab, var(--color-ink) 70%, transparent);
 		--color-paper: #0d0d10;
@@ -261,11 +263,15 @@
 		display: grid;
 		gap: 1.25rem;
 		color: var(--color-ink);
+
+		/* NEW: better reading size */
+		font-size: 1.125rem; /* 18px */
+		line-height: 1.75;
 	}
 
 	.post-article p {
 		margin: 0;
-		color: var(--color-muted);
+		color: color-mix(in oklab, var(--color-ink) 82%, transparent);
 	}
 
 	.post-article h2,
@@ -273,4 +279,60 @@
 		margin: 0.25rem 0;
 		line-height: 1.2;
 	}
+
+	.post-article a {
+		color: var(--color-ink);
+		text-decoration: underline;
+		text-underline-offset: 3px;
+		text-decoration-thickness: 1px;
+	}
+
+	.post-article a:hover {
+		color: color-mix(in oklab, var(--color-ink) 70%, transparent);
+	}
+
+	.post-article strong {
+		color: var(--color-ink);
+		font-weight: 700;
+	}
+
+	.post-article ul > li::marker,
+	.post-article ol > li::marker {
+		color: color-mix(in oklab, var(--color-ink) 65%, transparent);
+	}
+}
+
+@layer utilities {
+  /* --- Typography plugin overrides (fix light theme readability) --- */
+
+  /* Make article text bigger */
+  .prose {
+    font-size: 20px;
+    line-height: 1.75;
+    color: var(--color-ink);
+  }
+
+  /* Links: visible + readable */
+  .prose :where(a):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    color: var(--link-color);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+  }
+
+  .prose :where(a:hover):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    color: color-mix(in oklab, var(--color-ink) 70%, transparent);
+  }
+
+  /* Bold (**text**) */
+  .prose :where(strong):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    color: var(--color-ink);
+    font-weight: 700;
+  }
+
+  /* Bullet / number markers */
+  .prose :where(ul > li)::marker,
+  .prose :where(ol > li)::marker {
+    color: color-mix(in oklab, var(--color-ink) 65%, transparent);
+  }
 }
