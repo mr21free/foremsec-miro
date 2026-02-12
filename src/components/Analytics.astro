@@ -1,0 +1,12 @@
+---
+const enabled = import.meta.env.PUBLIC_ENABLE_ANALYTICS === 'true';
+---
+
+{enabled && (
+  <script
+    defer
+    src="https://cloud.umami.is/script.js"
+    data-website-id="22b56afa-d51b-40d1-8e4f-438be635c005"
+    data-domains="miro.foremsec.com"
+  ></script>
+)}
