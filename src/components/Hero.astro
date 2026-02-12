@@ -29,13 +29,28 @@ const { title, description, actions = [], role, location } = Astro.props as Prop
       >
         {title}
       </div>
+      <picture>
+        <source
+          type="image/avif"
+          srcset={`${withBase('/images/profile/miro-256.avif')} 256w, ${withBase('/images/profile/miro-512.avif')} 512w`}
+          sizes="(max-width: 768px) 128px, (max-width: 1024px) 176px, 256px"
+        />
+        <source
+          type="image/webp"
+          srcset={`${withBase('/images/profile/miro-256.webp')} 256w, ${withBase('/images/profile/miro-512.webp')} 512w`}
+          sizes="(max-width: 768px) 128px, (max-width: 1024px) 176px, 256px"
+        />
         <img
-          src={withBase("/miro.png")}
+          src={withBase('/images/profile/miro-512.webp')}
           alt="Miro Remias"
           loading="eager"
+          fetchpriority="high"
           decoding="async"
+          width="256"
+          height="256"
           class="w-32 h-32 md:w-44 md:h-44 lg:w-64 lg:mt-2 lg:h-64 rounded-full object-cover border border-base-200 shadow-sm"
         />
+      </picture>
     </div>
   </div>
 
