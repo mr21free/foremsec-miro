@@ -115,8 +115,12 @@ But a different purpose:
 > **Not “Bitcoin ticks.”**  
 > **“How much freedom have I bought?”**
 
-![Freedom Clock](/images/posts/blog8_freedom_clock-sq.jpeg)
-> Portfolio value in units of freedom.
+![Freedom Clock - Short Time](/images/posts/blog8_freedom_clock_short_time-sq.jpeg)
+> Portfolio value in units of freedom - quite some stacking needs to be done.
+
+![Freedom Clock - Long Time](/images/posts/blog8_freedom_clock_long_time-sq.jpeg)
+> Much more freedom ahead.
+
 
 ### What it shows (conceptually)
 
