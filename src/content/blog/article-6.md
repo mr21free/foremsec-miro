@@ -5,6 +5,7 @@ pubDate: 2026-01-15
 updatedDate: 2026-01-15
 heroImage: ../../assets/blog-buy-borrow-die.png
 author: Miro Remias
+draft: true
 tags:
   - astro
   - release

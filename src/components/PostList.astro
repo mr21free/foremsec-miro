@@ -45,16 +45,28 @@ function getPostData(item: RawPost) {
     return item && (item as any).data ? (item as any).data : item;
 }
 
+function isDraft(item: RawPost) {
+    const p: any = getPostData(item) || {};
+    return p.draft === true;
+}
+
 if (posts.length === 0) {
     console.warn(
         '[PostList] No posts provided; fetching from "blog" collection.'
     );
-    posts = posts.concat(await getCollection("blog")).sort(
-        (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-    );
+
+    const fetched = await getCollection("blog");
+
+    posts = posts
+        .concat(fetched)
+        .filter((post) => !isDraft(post))
+        .sort((a: any, b: any) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+} else {
+    // If posts are passed in via props, filter drafts too
+    posts = posts.filter((post) => !isDraft(post));
 }
 
-const subpath = import.meta.env.BASE_URL;
+// const subpath = import.meta.env.BASE_URL;
 
 const visiblePosts = typeof limit === "number" ? posts.slice(0, limit) : posts;
 

@@ -6,9 +6,10 @@ import PageLayout from '../../layouts/PageLayout.astro';
 import { getSite } from '../../utils/consts';
 import { withBase } from '../../utils/slugify';
 
-const projects = (await getCollection('projects')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-);
+const projects = (await getCollection('projects'))
+  .filter((post) => post.data.draft !== true)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
 const site = await getSite();
 ---
 
@@ -16,9 +17,9 @@ const site = await getSite();
 	<section class="content-shell py-12 space-y-10">
 		<header class="space-y-2">
 			<p class="text-sm uppercase tracking-[0.35em] text-muted">Projects</p>
-			<h1 class="text-4xl font-semibold text-ink">Product stories and recent experiences</h1>
+			<h1 class="text-4xl font-semibold text-ink">Projects and ideas worth sharing</h1>
 			<p class="text-muted max-w-3xl">
-				Sharing results, learnings, and design structures that power creative and technical teams.
+				Sharing my results, learnings, and ideas.
 			</p>
 		</header>
 		{projects.length === 0 ? (

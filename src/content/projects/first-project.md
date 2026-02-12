@@ -1,9 +1,9 @@
 ---
 title: RY3T - Heating houses with Bitcoin mining
-description: ... TBD ...
+description: ... cotent writing in progress ...
 pubDate: 2026-01-10
 heroImage: ../../assets/blog-placeholder-about.png
 updatedDate: 2026-01-12
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec justo vitae sapien condimentum feugiat non quis justo.
+... cotent writing in progress ...

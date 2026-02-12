@@ -6,6 +6,7 @@ pubDate: 2026-01-15
 updatedDate: 2026-01-15
 heroImage: ../../assets/blog-btc-node.png
 author: Miro Remias
+draft: true
 tags:
   - markdown
   - style

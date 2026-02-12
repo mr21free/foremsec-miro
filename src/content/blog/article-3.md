@@ -5,8 +5,7 @@ pubDate: 2026-02-09
 tags: ["bitcoin", "self-custody"]
 heroImage: ../../assets/blog-privacy.png
 author: Miro Remias
-
-draft: false
+draft: true
 ---
 
 Write in Markdown here.

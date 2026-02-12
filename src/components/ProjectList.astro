@@ -26,18 +26,18 @@ import { getCollection } from 'astro:content';
 import { withBase } from '../utils/slugify';
 
 interface RawProject {
-    // Either the flattened shape...
     title?: string;
     description?: string;
     link?: string;
     image?: any;
+    draft?: boolean;
 
-    // ...or the content collection shape:
     data?: {
         title?: string;
         description?: string;
         link?: string;
         image?: any;
+        draft?: boolean;
     };
 }
 
@@ -61,15 +61,26 @@ function getProjectData(item: RawProject) {
     return item && (item as any).data ? (item as any).data : item;
 }
 
+function isDraft(item: RawProject) {
+    const p: any = getProjectData(item) || {};
+    return p.draft === true;
+}
+
 function isExternal(href?: string) {
     return typeof href === "string" && /^https?:\/\//i.test(href);
 }
 
 if (items.length === 0) {
     console.warn('[ProjectList] No items provided; fetching from "projects" collection.');
-    items = items.concat(await getCollection("projects")).sort(
-        (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-    );
+    const fetched = await getCollection("projects");
+
+    items = items
+        .concat(fetched as any)
+        .filter((item) => !isDraft(item))
+        .sort((a: any, b: any) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+} else {
+    // If items are passed in via props, filter drafts too
+    items = items.filter((item) => !isDraft(item));
 }
 
 const visibleItems = typeof limit === "number" ? items.slice(0, limit) : items;
