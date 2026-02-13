@@ -32,22 +32,22 @@ const { title, description, actions = [], role, location } = Astro.props as Prop
       <picture>
         <source
           type="image/avif"
-          srcset={`${withBase('/images/profile/miro-256.avif')} 256w, ${withBase('/images/profile/miro-512.avif')} 512w`}
+          srcset={`${withBase('/images/profile/miro-384.avif')} 384w, ${withBase('/images/profile/miro-768.avif')} 768w`}
           sizes="(max-width: 768px) 128px, (max-width: 1024px) 176px, 256px"
         />
         <source
           type="image/webp"
-          srcset={`${withBase('/images/profile/miro-256.webp')} 256w, ${withBase('/images/profile/miro-512.webp')} 512w`}
+          srcset={`${withBase('/images/profile/miro-384.webp')} 384w, ${withBase('/images/profile/miro-768.webp')} 768w`}
           sizes="(max-width: 768px) 128px, (max-width: 1024px) 176px, 256px"
         />
         <img
-          src={withBase('/images/profile/miro-512.webp')}
+          src={withBase('/images/profile/miro-768.webp')}
           alt="Miro Remias"
           loading="eager"
           fetchpriority="high"
           decoding="async"
-          width="256"
-          height="256"
+          width="768"
+          height="512"
           class="w-32 h-32 md:w-44 md:h-44 lg:w-64 lg:mt-2 lg:h-64 rounded-full object-cover border border-base-200 shadow-sm"
         />
       </picture>
