@@ -30,6 +30,7 @@ interface RawProject {
     description?: string;
     link?: string;
     image?: any;
+    heroImage?: any;
     draft?: boolean;
 
     data?: {
@@ -37,6 +38,7 @@ interface RawProject {
         description?: string;
         link?: string;
         image?: any;
+        heroImage?: any;
         draft?: boolean;
     };
 }
@@ -119,7 +121,7 @@ const baseUrl =
                             <Card
                                 title={p.title}
                                 href={href}
-                                image={p.image}
+                                image={p.heroImage ?? p.image}
                                 imageAlt={p.title}
                                 description={p.description}
                                 variant="project"
