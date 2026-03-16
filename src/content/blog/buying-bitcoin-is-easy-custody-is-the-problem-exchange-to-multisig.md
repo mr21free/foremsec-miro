@@ -5,6 +5,7 @@ pubDate: 2026-02-11
 updatedDate: 2026-02-11
 heroImage: ../../assets/blog-multisig.png
 author: Miro Remias
+draft: false
 tags:
   - bitcoin
   - self-custody

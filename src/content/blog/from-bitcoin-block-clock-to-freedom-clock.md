@@ -5,6 +5,7 @@ pubDate: 2026-02-12
 updatedDate: 2026-02-12
 heroImage: ../../assets/blog-block-clock.png
 author: Miro Remias
+draft: false
 tags:
   - bitcoin
   - hardware
