@@ -250,6 +250,24 @@ A premium vault network would ideally provide:
 This isn’t decentralization as a religion.
 It’s turning availability into something you can verify, not just trust.
 
+## The circular dependency trap
+
+Once you start combining options, a new failure mode appears that has nothing to do with encryption or redundancy.
+
+Here is a real example. You store your password manager master password in a bank safe deposit box. The bank key lives in a home safe. The home safe has a PIN. You forget the PIN. Everything downstream — email, accounts, crypto access, two-factor codes — is now unreachable behind a number you no longer know.
+
+This is the circular dependency trap: a chain where every link depends on the previous one, and the first link is a single point of failure.
+
+A few design rules that help:
+
+**Every chain needs a way out that exists outside the chain.** One piece — typically the last-resort entry point — should be recoverable without needing anything else you own or remember. A trusted person, a sealed envelope with a lawyer, durable physical media in an independently accessible location.
+
+**The bottom of your dependency tree cannot be a memorized PIN or password.** Memory degrades, stress disrupts recall, and death makes it permanent loss. The deepest piece in your chain should exist physically, not only in your head.
+
+**Test the recovery path, not just the access path.** Pick the most critical lock in your chain and ask: if I lost this and only this, what happens next? If the answer is "everything stops," that lock needs a backup path.
+
+A chain that is technically strong but structurally circular is not a paranoia-10 setup — it is a liability at any level.
+
 ## So what’s the best answer?
 
 There isn’t one.
