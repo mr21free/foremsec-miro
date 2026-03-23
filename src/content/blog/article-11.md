@@ -1,8 +1,8 @@
 ---
-title: Article 6
+title: Article 11
 description: Lorem ipsum dolor sit amet
-pubDate: 2026-01-15
-updatedDate: 2026-01-15
+pubDate: 2026-03-23
+updatedDate: 2026-03-23
 heroImage: ../../assets/blog-freedom-journey.png
 author: Miro Remias
 draft: true
