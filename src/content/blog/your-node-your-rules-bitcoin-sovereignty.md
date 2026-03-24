@@ -21,6 +21,8 @@ That feeling has a name: sovereignty. And once you have it, going back feels lik
 
 This is the story of why I built a personal Bitcoin node, what it actually took, and what I learned along the way.
 
+---
+
 ## What a Bitcoin Node Actually Does
 
 Most people interacting with Bitcoin are doing so through a node they don't control.
@@ -38,6 +40,8 @@ When your wallet connects to your own node instead of a public one, a few things
 
 The network also benefits slightly. Every node strengthens decentralization. Running one is a small contribution to the infrastructure that makes Bitcoin function without a central authority. It's not obligatory, but it's meaningful.
 
+---
+
 ## Why I Built One
 
 My use case is specific. I run read-only wallet descriptors on the node to track wallet movements in real time. Every incoming and outgoing transaction triggers an alert delivered to Signal — amount, counterpart address, direction. No app, no third-party notification service, no privacy leak. Just my node watching the chain and telling me what changed.
@@ -45,6 +49,11 @@ My use case is specific. I run read-only wallet descriptors on the node to track
 I also use it for transaction analysis. When I want to investigate a transaction — inputs, outputs, fee rate, UTXO origin — I query my own node directly from the terminal. It's not as visual as a browser-based mempool explorer, but it's accurate, private, and always available.
 
 Beyond the technical, there's something grounding about having the whole blockchain locally. Every block since the genesis block. Independently verified. On hardware you can hold in your hand. It reframes how you think about Bitcoin from "asset I own" to "system I participate in."
+
+![Raspberry Pi 5 serving as BTC node](/images/posts/blog2_BTC_node.jpeg)
+> Raspberry Pi 5 serving as BTC node.
+
+---
 
 ## What You Actually Need to Build One
 
@@ -60,11 +69,15 @@ If you want to go further and run your own mempool visualizer — a self-hosted 
 
 One thing worth doing immediately once you have a stable setup: write a backup script. Configurations, wallet descriptors, any scripts you've written — back them up somewhere. Hardware dies. The node can be rebuilt from scratch; what's harder to rebuild is the configuration work you did on top of it.
 
+---
+
 ## Choosing the Software
 
 I run the latest stable release of Bitcoin Core. There is an ongoing debate in the Bitcoin community between Core and Bitcoin Knots, which is a fork of Core with additional filtering options — particularly around what transactions are allowed into the mempool. Both are legitimate full node implementations. Both verify the chain to the same consensus rules.
 
 I don't have a strong opinion on which one is better for your use case. Core is the most widely tested implementation with the largest contributor base. Knots is smaller but maintained by a developer with a long track record. Read the debate, form your own view, and pick one. Either way you're running a full node.
+
+---
 
 ## Security: Locking It Down
 
@@ -85,6 +98,8 @@ A few principles I applied:
 **No private keys on the node. Ever.** This one is non-negotiable. The node is for verification and monitoring. It is not a signing device. Private keys live on hardware wallets. The node never sees them. If the node is somehow compromised, there is nothing to steal.
 
 **Hardware wallet integration.** I use Sparrow Wallet connected directly to my own node. Sparrow handles the signing interface; the node handles chain data. Everything stays local. No external query. No privacy exposure.
+
+---
 
 ## Monitoring: Your Node Tells You What's Happening
 
@@ -107,6 +122,8 @@ This kind of monitoring is not technically complex. A few shell scripts, a Signa
 ![Daily Signal Notification](/images/posts/blog2_signal_notification.jpg)
 > Daily Signal Notification.
 
+---
+
 ## What Else You Can Build on Top
 
 Once you have a full node running and the blockchain locally available, you have the raw data for a surprising range of projects.
@@ -116,6 +133,8 @@ One example: a Bitcoin block clock. Since your node knows the current block heig
 https://miro.foremsec.com/blog/from-bitcoin-block-clock-to-freedom-clock/
 
 That's one example. The broader point is that a node makes you a first-class participant in the network, with local access to chain data that most people only reach through someone else's API.
+
+---
 
 ## Alternatives to Building Your Own
 
@@ -127,6 +146,8 @@ If bare-metal assembly isn't your style, the packaged node software ecosystem ha
 
 All of these still give you a real Bitcoin node. The tradeoff is you're running additional software layers on top of Core. For most people, that's a perfectly reasonable choice. For builders who want full control over every component, bare metal gives you more flexibility.
 
+---
+
 ## What You Can Do
 
 **If you're just getting started:** Look into Umbrel or RaspiBlitz. Most of the setup complexity is handled. Get the hardware, follow the guide, and let it sync. The main investment is time, not expertise.
@@ -136,5 +157,7 @@ All of these still give you a real Bitcoin node. The tradeoff is you're running 
 **If you want the full stack:** Add a hardware wallet integration via Sparrow, encrypt your volumes, build out your alert pipeline, and connect everything locally. Once it's running, add a backup routine and treat it like infrastructure — because it is.
 
 ---
+
+## Disclosure
 
 *No sponsorships. No affiliate links. Every tool mentioned is something I use directly. Opinions are my own.*

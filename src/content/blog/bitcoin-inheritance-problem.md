@@ -140,4 +140,6 @@ Run it, find the gaps, fix them, run it again with a different person or scenari
 
 ---
 
-*Disclosure: this article reflects personal thinking and experience. It is not legal, financial, or tax advice. The setup described is intentionally generalized for privacy. Consult qualified professionals in your jurisdiction for advice specific to your situation. No sponsored products or paid mentions.*
+## Disclosure
+
+*This article reflects personal thinking and experience. It is not legal, financial, or tax advice. The setup described is intentionally generalized for privacy. Consult qualified professionals in your jurisdiction for advice specific to your situation. No sponsored products or paid mentions.*
