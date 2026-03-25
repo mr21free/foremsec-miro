@@ -1,0 +1,117 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import { Icon } from 'astro-icon/components';
+import ProfilePhoto from '../components/ProfilePhoto.astro';
+import { getAuthorSummary, getSite } from '../utils/consts';
+
+const site = await getSite();
+const author = site.author || {};
+const socialEntries = (site.social || []) as Array<{ id: string; label: string; href: string }>;
+const socials = new Map(
+  socialEntries.map((item) => [item.id.toLowerCase(), item]),
+);
+const vcardPath = site.contact?.vcardPath || '/miro-remias-contat.vcf';
+
+const iconMap: Record<string, string> = {
+  linkedin: 'tabler:brand-linkedin',
+  x: 'tabler:brand-x',
+  github: 'tabler:brand-github',
+  telegram: 'tabler:brand-telegram',
+  discord: 'tabler:brand-discord',
+  website: 'tabler:world-www',
+};
+
+const contactLinks = ['linkedin', 'x', 'github', 'telegram', 'discord', 'website']
+  .map((id) => socials.get(id))
+  .filter(Boolean)
+  .map((item) => ({
+    label: item!.label,
+    href: item!.href,
+    icon: iconMap[item!.id.toLowerCase()] || 'tabler:link',
+  }));
+
+contactLinks.push({
+  label: 'Save Contact Info',
+  href: vcardPath,
+  download: true,
+  note: 'social + email',
+  icon: 'tabler:user-scan',
+});
+
+const summary = getAuthorSummary(author as { role?: string; bio?: string });
+---
+
+<PageLayout
+  title={`Contact | ${author.name || 'Miro Remias'}`}
+  description={summary}
+  hideNavigation={true}
+  hideHeader={true}
+  forceTheme="dark"
+  bodyClass="contact-body"
+>
+  <section class="contact-page min-h-[calc(100vh-var(--grid-cell)*3)] px-4 py-8 sm:px-6 lg:px-0">
+    <div class="mx-auto flex max-w-4xl flex-col gap-6">
+      <div class="contact-intro rounded-[2rem] border border-white/12 bg-white/5 p-6 shadow-[0_24px_90px_rgba(0,0,0,0.45)] md:p-10">
+        <div class="flex flex-col gap-8">
+          <div class="flex flex-col gap-6 sm:flex-row sm:items-center">
+            <ProfilePhoto
+              eager={true}
+              class="h-28 w-28 rounded-full border border-white/15 object-cover shadow-[0_16px_45px_rgba(0,0,0,0.45)] sm:h-32 sm:w-32"
+              sizes="(max-width: 640px) 112px, 128px"
+              width="384"
+              height="384"
+            />
+
+            <div class="space-y-3">
+              <p class="text-[0.7rem] font-semibold uppercase tracking-[0.42em] text-white/45">Contact</p>
+              <h1 class="max-w-xl font-serif text-4xl leading-none text-white sm:text-5xl lg:text-6xl">
+                One place to find me.
+              </h1>
+            </div>
+          </div>
+
+          <p class="max-w-2xl text-base leading-7 text-white/72 sm:text-lg">
+            {summary}
+          </p>
+
+          <p class="text-sm uppercase tracking-[0.28em] text-white/35">
+            {author.location}
+          </p>
+        </div>
+      </div>
+
+      <div class="contact-links rounded-[2rem] border border-white/12 bg-black p-4 shadow-[0_24px_90px_rgba(0,0,0,0.45)] md:p-5">
+        <div class="grid gap-3">
+          {contactLinks.map((link, index) => (
+            <a
+              href={link.href}
+              download={link.download}
+              aria-disabled={link.inactive ? 'true' : undefined}
+              target={!link.download && !link.inactive && link.href.startsWith('http') ? '_blank' : undefined}
+              rel={!link.download && !link.inactive && link.href.startsWith('http') ? 'noreferrer' : undefined}
+              class:list={[
+                'contact-link group flex items-center justify-between gap-4 rounded-[1.5rem] border border-white/10 bg-white/4 px-5 py-4 text-white transition duration-200',
+                link.inactive && 'contact-link--inactive',
+              ]}
+              style={`animation-delay:${index * 90}ms;`}
+            >
+              <span class="flex items-center gap-4">
+                <span class="flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/6 text-white">
+                  <Icon name={link.icon} class="h-6 w-6" />
+                </span>
+                <span class="flex flex-col">
+                  <span class="text-lg font-semibold tracking-[0.02em]">{link.label}</span>
+                  {link.note && <span class="text-xs uppercase tracking-[0.24em] text-white/45">{link.note}</span>}
+                  {link.inactive && <span class="text-xs uppercase tracking-[0.24em] text-white/35">link pending</span>}
+                </span>
+              </span>
+              <span class="text-sm uppercase tracking-[0.24em] text-white/45 transition duration-200 group-hover:text-[#f7931a]">
+                {link.download ? 'Save' : link.inactive ? 'Soon' : 'Open'}
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+</PageLayout>

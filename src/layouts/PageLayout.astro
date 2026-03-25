@@ -1,10 +1,10 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 
-const { title, description } = Astro.props;
+const { title, description, hideNavigation = false, hideHeader = false, forceTheme, bodyClass } = Astro.props;
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} hideNavigation={hideNavigation} hideHeader={hideHeader} forceTheme={forceTheme} bodyClass={bodyClass}>
     <div class="flex flex-col pb-16 min-h-[calc(100vh-var(--grid-cell)*2)]">
         <slot />
     </div>

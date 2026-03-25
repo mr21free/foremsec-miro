@@ -1,0 +1,42 @@
+---
+import { withBase } from "../utils/slugify";
+
+export interface Props {
+  class?: string;
+  sizes?: string;
+  width?: string;
+  height?: string;
+  eager?: boolean;
+}
+
+const {
+  class: className = "shrink-0 w-32 h-32 md:w-44 md:h-44 lg:w-64 lg:mt-2 lg:h-64 rounded-full object-cover border border-base-200 shadow-sm",
+  sizes = "(max-width: 768px) 128px, (max-width: 1024px) 176px, 256px",
+  width = "768",
+  height = "512",
+  eager = false,
+} = Astro.props as Props;
+---
+
+<picture class="shrink-0">
+  <source
+    type="image/avif"
+    srcset={`${withBase('/images/profile/miro-384.avif')} 384w, ${withBase('/images/profile/miro-768.avif')} 768w`}
+    sizes={sizes}
+  />
+  <source
+    type="image/webp"
+    srcset={`${withBase('/images/profile/miro-384.webp')} 384w, ${withBase('/images/profile/miro-768.webp')} 768w`}
+    sizes={sizes}
+  />
+  <img
+    src={withBase('/images/profile/miro-768.webp')}
+    alt="Miro Remias"
+    loading={eager ? "eager" : "lazy"}
+    fetchpriority={eager ? "high" : "auto"}
+    decoding="async"
+    width={width}
+    height={height}
+    class={className}
+  />
+</picture>

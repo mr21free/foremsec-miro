@@ -10,20 +10,24 @@ interface Props {
 	title?: string;
 	description?: string;
 	image?: ImageMetadata;
+	hideNavigation?: boolean;
+	hideHeader?: boolean;
+	forceTheme?: 'light' | 'dark';
+	bodyClass?: string;
 }
 
 const site = await getSite();
-const { title = site.author.name, description, image } = Astro.props;
+const { title = site.author.name, description, image, hideNavigation = false, hideHeader = false, forceTheme, bodyClass } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme={forceTheme}>
     <head>
         <BaseHead title={title} description={description} image={image} />
         <Analytics />
     </head>
-    <body>
-        <Header />
+    <body class={bodyClass}>
+        {!hideHeader && <Header hideNavigation={hideNavigation} />}
         <main class="content-shell">
             <slot />
         </main>

@@ -7,7 +7,6 @@ import SectionList from "../components/SectionList.astro";
 import { getCollection } from "astro:content";
 import { getSite } from '../utils/consts';
 import ProjectList from '../components/ProjectList.astro';
-import Social from '../components/Social.astro';
 
 const cv = (await getCollection("cv" as any)) as any[];
 
@@ -23,8 +22,6 @@ const site = await getSite();
 		role={site.author.role}
 		location={site.author.location}
 	/>
-
-	<Social class="mt-8" />
 
 	<ProjectList
 		heading="Projects"
