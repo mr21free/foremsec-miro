@@ -14,9 +14,13 @@ interface Props {
     heroImage?: ImageMetadata;
     Content?: any;
     tags?: string[];
+    readingTime?: string;
 }
 
-const { title, description, pubDate, updatedDate, heroImage, tags = [], Content } = Astro.props as Props;
+const { title, description, pubDate, updatedDate, heroImage, tags = [], Content, readingTime } = Astro.props as Props;
+const showUpdatedDate =
+	updatedDate &&
+	updatedDate.toDateString() !== pubDate.toDateString();
 ---
 
 <BaseLayout title={title} description={description} image={heroImage}>
@@ -27,7 +31,12 @@ const { title, description, pubDate, updatedDate, heroImage, tags = [], Content 
             <h1>{title}</h1>
             <p class="post-meta">
                 <FormattedDate date={pubDate} />
-                {updatedDate && (
+                {readingTime && (
+                    <span>
+                        &middot; {readingTime}
+                    </span>
+                )}
+                {showUpdatedDate && (
                     <span>
                         &middot; Updated <FormattedDate date={updatedDate} />
                     </span>

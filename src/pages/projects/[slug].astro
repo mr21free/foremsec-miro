@@ -1,6 +1,7 @@
 ---
 import { type CollectionEntry, getCollection, render } from 'astro:content';
 import ProjectPost from '../../layouts/ProjectPost.astro';
+import { getReadingTime } from '../../utils/reading-time';
 
 export async function getStaticPaths() {
 	const projects = await getCollection('projects');
@@ -14,7 +15,9 @@ type Props = CollectionEntry<'projects'>;
 
 const project = Astro.props as Props;
 const { Content } = await render(project);
+const imageCount = (project.body.match(/!\[[^\]]*\]\([^)]+\)/g) || []).length + (project.data.heroImage ? 1 : 0);
+const readingTime = getReadingTime(project.body, imageCount);
 ---
-<ProjectPost {...project.data}>
+<ProjectPost {...project.data} readingTime={readingTime.text}>
 	<Content />
 </ProjectPost>
