@@ -1,0 +1,87 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import ProfilePhoto from '../../components/ProfilePhoto.astro';
+import { getAuthorSummary, getSite } from '../../utils/consts';
+import { getContactPageUrl, type SocialLink } from '../../utils/contact';
+
+const site = await getSite();
+const author = site.author || {};
+const authorName = typeof author.name === 'string' ? author.name.toUpperCase() : '';
+const socialLinks = ((site.social || []) as SocialLink[]);
+const contactUrl = getContactPageUrl(socialLinks);
+const website = socialLinks.find((item) => item.id.toLowerCase() === 'website');
+const summary = getAuthorSummary(author as { role?: string; bio?: string });
+---
+
+<PageLayout
+  title={`QR | ${author.name || 'Miro Remias'}`}
+  description={`QR code for ${contactUrl}`}
+  hideNavigation={true}
+  hideHeader={true}
+  forceTheme="dark"
+  bodyClass="contact-body"
+>
+  <section class="contact-page min-h-[calc(100vh-var(--grid-cell)*3)] px-4 py-8 sm:px-6 lg:px-0">
+    <div class="mx-auto flex max-w-4xl flex-col gap-6">
+      <div class="contact-intro rounded-[2rem] border border-white/12 bg-white/5 p-6 shadow-[0_24px_90px_rgba(0,0,0,0.45)] md:p-10">
+        <div class="flex flex-col gap-8">
+          <div class="flex flex-col gap-6 sm:flex-row sm:items-center">
+            <ProfilePhoto
+              eager={true}
+              class="h-28 w-28 rounded-full border border-white/15 object-cover shadow-[0_16px_45px_rgba(0,0,0,0.45)] sm:h-32 sm:w-32"
+              sizes="(max-width: 640px) 112px, 128px"
+              width="384"
+              height="384"
+            />
+
+            <div class="space-y-3">
+              <p class="text-[0.7rem] font-semibold uppercase tracking-[0.42em] text-white/45">Contact</p>
+              <h1 class="hero-letters max-w-xl text-[16vw] leading-[0.85] font-extrabold text-white uppercase sm:text-7xl lg:text-[8rem]">
+                {authorName}
+              </h1>
+            </div>
+          </div>
+
+          <p class="max-w-2xl text-base leading-7 text-white/72 sm:text-lg">{summary}</p>
+
+          <p class="text-sm uppercase tracking-[0.28em] text-white/35">
+            {author.location}
+          </p>
+        </div>
+      </div>
+
+      <div class="rounded-[2rem] border border-white/12 bg-black p-5 shadow-[0_24px_90px_rgba(0,0,0,0.45)]">
+        <div class="mx-auto flex max-w-xl flex-col items-center gap-6">
+          <p class="text-center text-lg font-semibold tracking-[0.02em] text-white">
+            {website?.href || contactUrl}
+          </p>
+
+          <img
+            src="/contact-qr.png"
+            alt={`QR code linking to ${contactUrl}`}
+            class="w-full max-w-md rounded-[1.5rem] border border-white/10 bg-black p-4"
+            loading="eager"
+            decoding="async"
+          />
+
+          <div class="flex flex-wrap items-center justify-center gap-3">
+            <a
+              href="/contact-qr.png"
+              download="miro-remias-contact-qr.png"
+              class="contact-link rounded-full border border-white/10 bg-white/4 px-5 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-white"
+            >
+              Download QR
+            </a>
+            <a
+              href="/contact"
+              class="contact-link rounded-full border border-white/10 bg-white/4 px-5 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-white"
+              style="animation-delay:90ms;"
+            >
+              Open Contact
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</PageLayout>

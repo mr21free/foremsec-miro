@@ -28,7 +28,7 @@ const aProps = { href, 'aria-label': `Ver ${title}`, ...(isExternal ? { rel: 'no
 		<a class="sr-only" {...aProps}>Ver {title}</a>
 
 		{image && (
-			<figure class="lg:col-span-full relative overflow-hidden bg-[color-mix(in_oklab,var(--color-ink)_4%,var(--color-surface))]">
+			<figure class="lg:col-span-full relative overflow-hidden rounded-[1.5rem] bg-[color-mix(in_oklab,var(--color-ink)_4%,var(--color-surface))]">
 				{typeof image === 'string' ? (
 					<img
 						src={image}
