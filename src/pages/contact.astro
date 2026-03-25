@@ -6,6 +6,7 @@ import { getAuthorSummary, getSite } from '../utils/consts';
 
 const site = await getSite();
 const author = site.author || {};
+const authorName = typeof author.name === 'string' ? author.name.toUpperCase() : '';
 const socialEntries = (site.social || []) as Array<{ id: string; label: string; href: string }>;
 const socials = new Map(
   socialEntries.map((item) => [item.id.toLowerCase(), item]),
@@ -42,7 +43,7 @@ const summary = getAuthorSummary(author as { role?: string; bio?: string });
 ---
 
 <PageLayout
-  title={`Contact | ${author.name || 'Miro Remias'}`}
+  title={author.name ? `Contact | ${author.name}` : 'Contact'}
   description={summary}
   hideNavigation={true}
   hideHeader={true}
@@ -64,8 +65,8 @@ const summary = getAuthorSummary(author as { role?: string; bio?: string });
 
             <div class="space-y-3">
               <p class="text-[0.7rem] font-semibold uppercase tracking-[0.42em] text-white/45">Contact</p>
-              <h1 class="max-w-xl font-serif text-4xl leading-none text-white sm:text-5xl lg:text-6xl">
-                One place to find me.
+              <h1 class="hero-letters max-w-xl text-[16vw] leading-[0.85] font-extrabold text-white uppercase sm:text-7xl lg:text-[8rem]">
+                {authorName}
               </h1>
             </div>
           </div>
