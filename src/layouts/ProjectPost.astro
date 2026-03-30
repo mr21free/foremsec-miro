@@ -9,6 +9,7 @@ import { slugify, withBase } from '../utils/slugify';
 interface Props {
 	title: string;
 	description: string;
+	author?: string;
 	pubDate: Date;
 	updatedDate?: Date;
 	heroImage?: ImageMetadata;
@@ -17,7 +18,7 @@ interface Props {
 	readingTime?: string;
 }
 
-const { title, description, pubDate, updatedDate, heroImage, tags = [], Content, readingTime } = Astro.props as Props;
+const { title, description, author, pubDate, updatedDate, heroImage, tags = [], Content, readingTime } = Astro.props as Props;
 const showUpdatedDate =
 	updatedDate &&
 	updatedDate.toDateString() !== pubDate.toDateString();
@@ -30,15 +31,22 @@ const showUpdatedDate =
 			<p class="eyebrow">Project</p>
 			<h1>{title}</h1>
 			<p class="post-meta">
-				<FormattedDate date={pubDate} />
+				{author && (
+					<span class="post-meta-item">
+						By {author}
+					</span>
+				)}
+				<span class="post-meta-item">
+					<FormattedDate date={pubDate} />
+				</span>
 				{readingTime && (
-					<span>
-						&middot; {readingTime}
+					<span class="post-meta-item">
+						{readingTime}
 					</span>
 				)}
 				{showUpdatedDate && (
-					<span>
-						&middot; Updated <FormattedDate date={updatedDate} />
+					<span class="post-meta-item">
+						Updated <FormattedDate date={updatedDate} />
 					</span>
 				)}
 			</p>

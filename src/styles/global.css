@@ -246,6 +246,25 @@
 		font-size: 0.9rem;
 	}
 
+	.post-meta {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.45rem;
+	}
+
+	.post-meta-item {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.35rem;
+	}
+
+	.post-meta-item + .post-meta-item::before {
+		content: "·";
+		opacity: 0.7;
+		margin-right: 0.1rem;
+	}
+
 	.section-heading {
 		display: grid;
 		gap: 0.4rem;
