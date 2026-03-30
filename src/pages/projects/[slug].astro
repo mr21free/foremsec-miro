@@ -2,6 +2,7 @@
 import { type CollectionEntry, getCollection, render } from 'astro:content';
 import ProjectPost from '../../layouts/ProjectPost.astro';
 import { getReadingTime } from '../../utils/reading-time';
+import { withBase } from '../../utils/slugify';
 
 export async function getStaticPaths() {
 	const projects = await getCollection('projects');
@@ -17,7 +18,32 @@ const project = Astro.props as Props;
 const { Content } = await render(project);
 const imageCount = (project.body.match(/!\[[^\]]*\]\([^)]+\)/g) || []).length + (project.data.heroImage ? 1 : 0);
 const readingTime = getReadingTime(project.body, imageCount);
+const allProjects = await getCollection('projects');
+const currentTags = new Set((project.data.tags ?? []).map((tag) => tag.toLowerCase()));
+
+const relatedItems = allProjects
+	.filter((item) => item.id !== project.id && item.data.draft !== true)
+	.map((item) => {
+		const sharedTagCount = (item.data.tags ?? []).filter((tag) =>
+			currentTags.has(tag.toLowerCase()),
+		).length;
+
+		return {
+			title: item.data.title,
+			description: item.data.description,
+			href: withBase(`/projects/${item.id}/`),
+			pubDate: item.data.pubDate,
+			heroImage: item.data.heroImage,
+			sharedTagCount,
+		};
+	})
+	.sort((a, b) => {
+		if (b.sharedTagCount !== a.sharedTagCount) return b.sharedTagCount - a.sharedTagCount;
+		return b.pubDate.valueOf() - a.pubDate.valueOf();
+	})
+	.slice(0, 3)
+	.map(({ sharedTagCount, ...item }) => item);
 ---
-<ProjectPost {...project.data} readingTime={readingTime.text}>
+<ProjectPost {...project.data} readingTime={readingTime.text} relatedItems={relatedItems}>
 	<Content />
 </ProjectPost>

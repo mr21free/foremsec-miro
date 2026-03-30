@@ -38,7 +38,7 @@ let {
     posts = [],
     limit = 6,
     viewAllHref,
-    viewAllLabel = "View all posts",
+    viewAllLabel = "ALL BLOGS",
 } = Astro.props as Props;
 
 function getPostData(item: RawPost) {
@@ -86,8 +86,9 @@ const visiblePosts = typeof limit === "number" ? posts.slice(0, limit) : posts;
                 </h2>
             </div>
 
+            <div class="lg:col-span-2 space-y-10">
             <div
-                class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-y-20 gap-x-8"
+                class="grid grid-cols-1 md:grid-cols-2 gap-y-20 gap-x-8"
             >
                 {
                     visiblePosts.map((post) => {
@@ -118,11 +119,10 @@ const visiblePosts = typeof limit === "number" ? posts.slice(0, limit) : posts;
                         );
                     })
                 }
-                <Card
-                    title={viewAllLabel}
-                    href={withBase(viewAllHref ?? '/blog/')}
-                    variant="post"
-                />
+            </div>
+            <div class="flex justify-start">
+                <a class="button secondary" href={withBase(viewAllHref ?? '/blog/')}>{viewAllLabel}</a>
+            </div>
             </div>
         </div>
     </div>

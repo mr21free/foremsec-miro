@@ -281,6 +281,47 @@
 		gap: 2rem;
 	}
 
+	.related-content {
+		display: grid;
+		gap: 1.5rem;
+		margin-top: 3rem;
+		padding-top: 3rem;
+		border-top: 1px solid var(--color-border);
+	}
+
+	.related-content__header {
+		display: grid;
+		gap: 0.4rem;
+	}
+
+	.related-content__header h2 {
+		margin: 0;
+		font-size: clamp(1.5rem, 2.3vw, 2rem);
+		line-height: 1.15;
+	}
+
+	.related-content__grid {
+		display: grid;
+		gap: 1rem;
+	}
+
+	.related-content__grid .card,
+	.related-content__grid .post-card {
+		padding: 0;
+		overflow: hidden;
+	}
+
+	.related-content__footer {
+		display: flex;
+		justify-content: flex-start;
+	}
+
+	@media (min-width: 900px) {
+		.related-content__grid {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+	}
+
 	.content-shell {
 		width: min(100%, var(--content-width));
 		max-width: var(--content-width);
@@ -318,6 +359,12 @@
 	.post-article h3 {
 		margin: 0.25rem 0;
 		line-height: 1.2;
+	}
+
+	.post-article hr {
+		margin: 3rem 0;
+		border: 0;
+		border-top: 1px solid var(--color-border);
 	}
 
 	.post-article a {
@@ -439,6 +486,12 @@
   .prose :where(ul > li)::marker,
   .prose :where(ol > li)::marker {
     color: color-mix(in oklab, var(--color-ink) 65%, transparent);
+  }
+
+  .prose :where(hr):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    border-color: var(--color-border);
   }
 }
 
