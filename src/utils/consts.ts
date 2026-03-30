@@ -15,6 +15,22 @@ export async function getSite() {
 	};
 }
 
+export function getSiteName(site?: { author?: { name?: string } }) {
+	const authorName = site?.author?.name?.trim();
+	return authorName || 'Miro Remias';
+}
+
+export function formatPageTitle(pageTitle?: string, site?: { author?: { name?: string } }) {
+	const siteName = getSiteName(site);
+	const normalizedPageTitle = pageTitle?.trim();
+
+	if (!normalizedPageTitle || normalizedPageTitle === siteName) {
+		return siteName;
+	}
+
+	return `${normalizedPageTitle} | ${siteName}`;
+}
+
 export function getAuthorSummary(author?: { role?: string; bio?: string }) {
 	const role = author?.role?.trim();
 	const bio = author?.bio?.trim();

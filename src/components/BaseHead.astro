@@ -4,7 +4,7 @@
 import '../styles/global.css';
 import type { ImageMetadata } from 'astro';
 import FallbackImage from '../assets/blog-placeholder-about.png';
-import { getSite } from '../utils/consts';
+import { getSite, getSiteName } from '../utils/consts';
 import { SEO } from 'astro-seo';
 
 const site = await getSite();
@@ -19,6 +19,7 @@ const { title, description, image = FallbackImage } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const imageURL = new URL((image as ImageMetadata).src, Astro.site ?? Astro.url);
+const siteName = getSiteName(site);
 ---
 
 <SEO
@@ -49,7 +50,7 @@ const imageURL = new URL((image as ImageMetadata).src, Astro.site ?? Astro.url);
 		link: [
 			{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
 			{ rel: 'sitemap', href: '/sitemap-index.xml' },
-			{ rel: 'alternate', type: 'application/rss+xml', title: site.title, href: new URL('rss.xml', Astro.site).toString() },
+			{ rel: 'alternate', type: 'application/rss+xml', title: `${siteName} RSS`, href: new URL('rss.xml', Astro.site).toString() },
 		],
 		meta: [
 			{ name: 'viewport', content: 'width=device-width,initial-scale=1' },

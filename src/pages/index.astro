@@ -13,9 +13,7 @@ const cv = (await getCollection("cv" as any)) as any[];
 const site = await getSite();
 ---
 
-<PageLayout
-	title={site.author.name || 'MIRO REMIAS'}
->
+<PageLayout>
 	<Hero
 		title={site.author.name || 'MIRO REMIAS'}
 		description={site.author.bio || 'Welcome to my personal website.'}

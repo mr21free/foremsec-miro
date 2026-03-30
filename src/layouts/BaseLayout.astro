@@ -4,7 +4,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import Analytics from '../components/Analytics.astro';
-import { getSite } from '../utils/consts';
+import { formatPageTitle, getSite } from '../utils/consts';
 
 interface Props {
 	title?: string;
@@ -17,13 +17,14 @@ interface Props {
 }
 
 const site = await getSite();
-const { title = site.author.name, description, image, hideNavigation = false, hideHeader = false, forceTheme, bodyClass } = Astro.props;
+const { title, description, image, hideNavigation = false, hideHeader = false, forceTheme, bodyClass } = Astro.props;
+const pageTitle = formatPageTitle(title, site);
 ---
 
 <!doctype html>
 <html lang="en" data-theme={forceTheme}>
     <head>
-        <BaseHead title={title} description={description} image={image} />
+        <BaseHead title={pageTitle} description={description} image={image} />
         <Analytics />
     </head>
     <body class={bodyClass}>
