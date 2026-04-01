@@ -2,7 +2,7 @@
 title: I Got Hacked — Here Is What I Changed and Why I Sleep Better Now
 description: "I got hacked and it changed how I think about personal security. This is the framework I built — layered defenses, separated identities, and practical paranoia that works without making daily life unbearable."
 pubDate: 2026-03-25
-updatedDate: 2026-03-25
+updatedDate: 2026-04-02
 heroImage: ../../assets/blog-privacy.png
 author: Miro Remias
 draft: false
@@ -14,25 +14,25 @@ tags:
   - opsec
 ---
 
-There is a specific kind of silence that follows the moment you realize you have been compromised.
+There is a weird kind of silence that hits when you realize you have been compromised.
 
-No alarm goes off. No red screen. No Hollywood dramatic music. Just a quiet, creeping awareness that something is wrong — a session you did not start, a notification you did not trigger, a file that moved when you were not looking.
+No alarm. No dramatic red screen. No movie scene where everything flashes at once. Just that creeping feeling that something is off: a session you did not start, a notification you did not trigger, a file that moved when you were not looking.
 
-That silence is the most dangerous part. Because by the time you notice, the damage is already done.
+That part is the worst. By the time you notice, the damage is usually already in motion.
 
-I got hacked. And it changed everything about how I think about personal security.
+I got hacked. It changed how I think about personal security.
 
-This is not an article about fear. It is about what I built afterward — a framework of layered defenses, separated identities, and practical paranoia that lets me sleep at night without making daily life unbearable.
+This is not a fear piece. It is what I built after the fact: layered defenses, separated identities, and a level of practical paranoia that helps me sleep without turning daily life into a bunker.
 
 ---
 
 ## The Threat Is Not What You Think
 
-Most people imagine hackers in dark rooms writing code. The reality is far less cinematic and far more effective.
+Most people still picture hackers as someone in a dark room writing code. The truth is less cinematic and a lot more effective.
 
-The majority of successful attacks do not start with malicious code. They start with a conversation. A message. A phone call that feels just real enough.
+Most successful attacks do not begin with malware. They begin with a conversation. A message. A phone call that feels real enough in the moment.
 
-Social engineering — manipulating people into giving up access, information, or control — now drives the bulk of security incidents. In 2025, social engineering was responsible for over 60% of crypto-related security incidents, according to multiple industry reports. That number is growing. And it is not limited to crypto. Bank accounts, email, cloud storage, investment platforms — everything is a target.
+Social engineering, meaning tricking people into giving up access, information, or control, drives a huge share of security incidents now. In 2025, it was tied to more than 60% of crypto-related incidents according to multiple industry reports. And this is not just a crypto problem. Bank accounts, email, cloud storage, investment platforms, basically your whole digital life, are all in play.
 
 Here is what the attacks actually look like today:
 
@@ -44,19 +44,19 @@ Here is what the attacks actually look like today:
 
 **Impersonation of family and friends.** A message arrives from someone you trust. The profile picture is right. The writing style is close enough. They need help urgently — a transfer, a password, access to something. It is not them.
 
-These are not edge cases. They are the mainstream attack vectors right now. And they are getting better every month.
+These are not weird edge cases anymore. This is the mainstream playbook now, and it keeps getting better.
 
 ---
 
 ## What Actually Happens When They Get In
 
-In most cases, the goal is not to break into a vault. It is to get you to open the door yourself.
+In most cases, the goal is not to break into some vault. It is to get you to open the door for them.
 
-The typical chain looks like this: you are tricked into downloading software, running a script, clicking a link, or granting access. That action compromises your device. From there, the attacker harvests everything they can reach — browser sessions (which means every service you are logged into), saved passwords, authentication tokens, files on your desktop and cloud, crypto wallet data, and keystroke logs.
+The chain usually looks boring. You get tricked into downloading software, running a script, clicking a link, or approving access. That compromises the device. From there, the attacker grabs whatever they can reach: browser sessions, which usually means every service you are logged into, saved passwords, authentication tokens, files on your machine and in the cloud, wallet data, and sometimes keystrokes too.
 
 **If you have a hot wallet on your phone or computer, it is gone.** There is no recovery. Crypto transactions are irreversible. If the attacker finds wallet files, seed phrases, or active sessions to exchanges, the funds move in seconds.
 
-But it is not only about crypto. They can drain bank accounts through compromised sessions. They can steal your identity through passport scans and tax documents sitting in your downloads folder. They can lock you out of your own email, which is the master key to resetting every other account you own.
+But this is not just about crypto. They can drain bank accounts through live sessions. They can steal your identity from passport scans and tax documents sitting in your downloads folder. They can lock you out of your email, which is basically the reset button for half your life.
 
 The damage scales with how much of your life lives on the device they compromised.
 
@@ -64,23 +64,23 @@ The damage scales with how much of your life lives on the device they compromise
 
 ## Why I Changed Everything
 
-I got hacked. The details do not matter for this article — what matters is what it taught me.
+I got hacked. The exact story is not the point here. What matters is what it forced me to admit.
 
-Before it happened, I thought I was careful. I was technical. I knew the risks in theory. But theory and practice are different countries, and I was living in theory.
+Before it happened, I thought I was careful. I was technical. I understood the risks in theory. But theory is cheap. Practice is where you find out what your setup actually looks like under pressure.
 
-The hack was not sophisticated. It was social engineering. Someone exploited a moment when I was not fully paying attention, and that was enough.
+The hack was not especially sophisticated. It was social engineering. Someone caught me in a moment where I was not paying enough attention, and that was enough.
 
-After that, I sat down and asked myself a hard question: *if someone compromised any single device I own right now, what could they reach?*
+Afterward I asked myself a question I should have asked much earlier: *if someone compromised any one device I own right now, how far could they get?*
 
-The answer was uncomfortable. Too much. Way too much.
+The answer was ugly. Too far.
 
-So I rebuilt everything. It took about a month. It was painful, tedious, and at times felt absurd. But when it was done, I had something I did not have before: a setup where no single point of failure could unravel my entire digital life.
+So I rebuilt the whole thing. It took about a month. It was tedious, annoying, and occasionally felt ridiculous. It was still worth it. When I was done, I had something I did not have before: a setup where one mistake or one compromised device could not unravel my entire digital life.
 
 ---
 
 ## The Attacker's Playbook — What to Watch For
 
-Before I describe what I built, it helps to understand how these attacks work psychologically. Because the technical part is almost irrelevant — the attack happens in your head before it happens on your device.
+Before I get into the setup, it helps to understand how these attacks work psychologically. The technical part matters, but the attack usually lands in your head before it lands on your device.
 
 **Urgency.** The single most effective tool in social engineering. "Your account is being accessed right now." "This offer expires in 10 minutes." "We need to verify your identity immediately or your account will be locked." Urgency bypasses your critical thinking. It makes you act before you evaluate. Every time you feel rushed, that is the moment to stop.
 
@@ -92,13 +92,13 @@ Before I describe what I built, it helps to understand how these attacks work ps
 
 **Too good to be true.** The job offer that pays twice market rate. The airdrop that requires "just one click." The investment opportunity with guaranteed returns. If it feels too generous, it is not generosity — it is bait.
 
-If you learn to recognize these patterns, you can stop most attacks before they start. Not because you are smarter than the attacker, but because you refuse to play the game on their terms.
+If you learn to spot these patterns, you stop a lot of attacks before they even start. Not because you are smarter than the attacker. Because you stop cooperating with the script they are trying to run on you.
 
 ---
 
 ## The Framework I Built
 
-What follows is not a step-by-step tutorial. It is the set of principles and decisions I made, described at a level that lets you adapt them to your own situation. My OPSEC rules prevent me from detailing exact tools and configurations — and that is intentional. A security setup that is publicly documented in detail is not a security setup. It is a target.
+What follows is not a step-by-step tutorial. It is the set of decisions and principles I ended up with, described at a level you can adapt to your own life. My OPSEC rules stop me from publishing exact tools and configurations, and that is deliberate. A security setup described in full detail on the public internet is not much of a security setup.
 
 ### Start With Cold Storage
 
@@ -106,7 +106,7 @@ The first and most important rule: **never store meaningful amounts of crypto in
 
 If your long-term Bitcoin holdings are in cold storage — hardware wallets, offline signing devices, air-gapped setups — then even a full device compromise cannot touch them. The attacker gets your browser sessions, your files, maybe your email. They do not get your Bitcoin.
 
-Cold storage is not a convenience. It is a firewall between everything that can be hacked and everything that matters most.
+Cold storage is not about convenience. It is the wall between everything that can be hacked and the part that would really hurt to lose.
 
 I covered custody in detail in a previous post:
 
@@ -114,7 +114,7 @@ https://miro.foremsec.com/blog/buying-bitcoin-is-easy-custody-is-the-problem-exc
 
 ### Categorize Everything
 
-One of the most useful things I did was sort every tool, service, and account I use into four categories:
+One of the most useful changes I made was forcing myself to sort every tool, service, and account into four categories:
 
 **ADMIN** — infrastructure-level tools that, if compromised, would cascade into everything else. Think: password manager, VPN, custom domain, authenticator app, primary encrypted email. These get the highest level of protection. Different credentials, hardware key authentication, isolated access.
 
@@ -124,85 +124,85 @@ One of the most useful things I did was sort every tool, service, and account I 
 
 **JUNK** — anything that requires an account but does not deserve real credentials. Throwaway email, minimal information, no connection to anything important.
 
-Each tier gets a different email address, a different level of authentication, and a different level of attention. The higher the tier, the more layers of protection. This separation means that even if a COMMS-level account is breached, the attacker finds nothing that leads them upward.
+Each tier gets a different email address, a different level of authentication, and a different amount of attention. The higher the tier, the more layers. That separation matters. If a COMMS-level account gets breached, there should be nothing there that helps the attacker climb upward.
 
 ### Two Phone Numbers
 
-I have two phones. One is a regular smartphone for daily use — browsing, messaging, apps, the usual. The other is a simple device with limited functionality. No camera. No apps. No smartphone operating system.
+I keep two phones. One is a normal smartphone for day-to-day use. Browsing, messaging, apps, the usual. The other is a simple device with limited functionality. No camera. No apps. No smartphone operating system.
 
 The second number is connected to critical services — banking, financial platforms, essential cloud accounts. It is never shared publicly. It never appears in any online profile, any form, any message to a stranger.
 
-If an attacker compromises your phone number through a SIM swap or social engineering attack on your carrier, they get access to every account that uses that number for two-factor authentication. By separating the numbers, the most valuable accounts are behind a number that the attacker does not even know exists.
+If an attacker gets control of your phone number through a SIM swap or by manipulating your carrier, they get a shot at every account tied to that number. Separating the numbers means the most valuable accounts sit behind a number the attacker does not even know exists.
 
 ### One Password Manager, One Authenticator
 
-Every password is unique, randomly generated, and stored in a single password manager. No reused passwords. No "I will remember this one." No passwords stored in browsers.
+Every password is unique, randomly generated, and stored in one password manager. No reused passwords. No "I will remember this one." No passwords saved in the browser.
 
 Every service that supports it gets two-factor authentication through a single authenticator app. The authenticator is backed up regularly and encrypted.
 
 For the most critical services — ADMIN tier — authentication also requires a hardware security key. Multiple copies of the key exist, stored in separate geographic locations. One for daily use, the others as backups in case the primary is lost or damaged.
 
-This means that even if someone gets my password (from a breach, a phishing attempt, or a compromised database), they still cannot access the account without the second factor. And even if they somehow intercept the second factor, the hardware key adds a third layer that requires physical possession.
+The point is simple: even if someone gets the password through a breach, phishing, or some compromised database, they still should not be able to get in. And for the most important accounts, even the second factor is not enough without the hardware key in hand.
 
 ### Email Architecture
 
-I use multiple email addresses from different providers. But none of them are the addresses I give to services.
+I use multiple email addresses from different providers, but none of them are the addresses I hand out directly to services.
 
 Instead, I use a personal domain and create aliases. Every service gets a unique alias that forwards to the actual mailbox. The service knows me as `something@mydomain.com`. It does not know which provider actually receives that email.
 
-This has three benefits. First, if a service is breached and my email address leaks, the attacker gets an alias — not the actual mailbox address. They do not know what to hack. Second, if a provider is compromised or goes offline, I redirect the alias to a different provider. I own the domain, so I control where the email goes. Third, I can instantly see which service leaked my address by checking which alias is receiving spam.
+This does three useful things. First, if a service leaks my address, the attacker gets an alias, not the real mailbox. Second, if a provider goes down or gets compromised, I can redirect the alias somewhere else because I control the domain. Third, I can see exactly which service leaked my address by checking which alias starts receiving spam.
 
 Using single sign-on (SSO) through a major provider is convenient. But it is a single point of failure. If that provider account is compromised, every service connected to it is compromised. I avoid it for anything above the COMMS tier.
 
 ### Browser Isolation
 
-I use multiple browser profiles. The profile I use for banking and financial services is configured to delete all data — history, cookies, sessions, cached credentials — every time the browser closes.
+I use multiple browser profiles. The one for banking and financial services is set to delete everything when it closes: history, cookies, sessions, cached credentials, the lot.
 
-This means that even if malware captures a snapshot of my running browser, it finds nothing from previous sessions. Every login is fresh. Every session is temporary. There is nothing to steal from a profile that does not remember anything.
+That means even if malware grabs a snapshot of the running browser, there is much less sitting there from previous sessions. Every login is fresh. Every session is temporary. A profile that remembers nothing gives away a lot less.
 
 ### VPN on Everything
 
-Every device that connects to a network runs through a VPN. Phone, computer, even home devices where possible. This is not about hiding from governments — it is about preventing anyone on the same network from intercepting traffic, and about reducing the amount of metadata that leaks to service providers and ISPs.
+Every device that connects to a network runs through a VPN where possible. Phone, computer, even home devices. This is not me pretending I can become invisible. It is about reducing easy interception on shared networks and leaking less metadata than necessary to providers and ISPs.
 
 ### Encrypted Cloud and Physical Backups
 
-Sensitive files never go to the cloud unencrypted. Anything that matters — documents, records, backup files — is encrypted locally with strong encryption before it is uploaded anywhere. The encryption password is separate from any account password and is not stored digitally.
+Sensitive files never go into the cloud unencrypted. Anything important, documents, records, backup files, gets encrypted locally before it goes anywhere. The encryption password is separate from account passwords and is not stored digitally.
 
-Backups also exist on physical drives stored in separate locations. Cloud services can be hacked, can change their terms, can go offline. Physical drives in your control, distributed across locations, provide a layer that does not depend on anyone else staying honest or online.
+I also keep physical backups on drives stored in separate locations. Cloud services can get hacked, change terms, or just disappear at the wrong moment. Physical drives you control are boring, which is exactly why they are useful.
 
 ### Protect the Whole Family
 
-This is the part most people miss. You can build an impenetrable setup for yourself, and then your partner clicks a link, your child installs an app, or a family member reuses a password — and the attacker gets in through them.
+This is the part a lot of people miss. You can harden your own setup, then your partner clicks the wrong link, your child installs something sketchy, or a family member reuses a password, and suddenly the problem walks in through the side door.
 
-I extended the core principles to everyone in my household. Not at the same paranoia level — that would be unsustainable — but the basics: unique passwords, a password manager, two-factor authentication on important accounts, awareness of phishing, and a simple rule: *if something feels wrong, stop and ask before you click.*
+I extended the core basics to everyone in my household. Not at the same paranoia level, because that would be unbearable, but the basics: unique passwords, a password manager, two-factor authentication where it matters, phishing awareness, and one simple rule: *if something feels off, stop and ask before you click.*
 
 Family members are also potential targets for impersonation attacks. We established verbal verification — simple things that only we would know — so that if a message or call claims to be from a family member and asks for something unusual, we can verify before acting.
 
 ### Question Every Device
 
-This one is easy to overlook. You add a smart speaker, a security camera, a home automation hub, a local AI server — each one is a potential entry point. Every device on your home network that connects to the internet is a surface an attacker can probe.
+This one is easy to overlook. You add a smart speaker, a camera, a home automation hub, a local AI server, and each one becomes a possible entry point. Anything on your home network that talks to the internet is part of the attack surface whether you think about it that way or not.
 
 For each device, ask: what data does it have access to? What network segments can it reach? What happens if it is compromised? If you are running anything that processes sensitive data — especially a local AI setup or a Bitcoin node — isolate it. Network segmentation, access controls, and regular firmware updates are not optional.
 
 ### Ship Sensitive Products Elsewhere
 
-If you order hardware that signals you hold crypto — hardware wallets, security keys, specialized equipment — consider having it delivered to a location that is not your home address. Delivery databases leak. Shipping records get compromised. If an attacker can correlate "this person ordered three hardware wallets" with a physical address, you have created a target.
+If you order hardware that strongly signals you hold crypto, hardware wallets, security keys, specialized gear, think about sending it somewhere that is not your home. Delivery databases leak. Shipping records get compromised. "This person ordered three hardware wallets" plus a physical address is not a great combination.
 
 ### Home Security
 
-This one crosses from digital into physical, but the boundary is thinner than people realize. Physical attacks on crypto holders — sometimes called "wrench attacks" — increased significantly in 2025, with recorded incidents nearly doubling compared to previous years.
+This crosses from digital into physical, but that boundary is thinner than people like to think. Physical attacks on crypto holders, sometimes called wrench attacks, rose sharply in 2025, with recorded incidents nearly doubling from previous years.
 
-A home alarm system, cameras, and physical security measures are worth the investment. But the more important principle is: do not keep anything at home that, if stolen, means you lose everything. Backups in other locations, multisig setups that require multiple keys from multiple places, and geographic distribution of critical materials mean that even a physical intrusion does not result in total loss.
+A home alarm system, cameras, and physical security measures are worth it. But the deeper rule is simpler: do not keep anything at home that turns one break-in into total loss. Backups in other locations, multisig setups, and spreading critical materials across places mean a physical intrusion does not automatically become a catastrophic one.
 
 ---
 
 ## The Hardest Part Is Maintenance
 
-Building the setup was one thing. Living with it is another.
+Building the setup was one thing. Living with it is something else.
 
-Following your own rules every single day is hard. There are moments when you want to skip a step, reuse a password, log in from the wrong browser profile, or skip the VPN because the connection is slow.
+Following your own rules every day gets annoying. There are always moments when you want to skip a step, reuse a password, log in from the wrong browser profile, or turn off the VPN because the connection is slow.
 
-Maintaining discipline is the real cost of this framework. Not the money. Not the hardware. The daily decision to do the slightly harder thing because the easier thing has consequences you cannot undo.
+That is the real cost. Not the money. Not the hardware. The repeated decision to do the slightly more annoying thing because the convenient thing can blow up in ways you cannot reverse.
 
 I review my setup periodically. I check for accounts I no longer use. I rotate what needs rotating. I make sure the family is still following the basics. It is not dramatic. It is not fun. But it is the price of sleeping well.
 
@@ -210,7 +210,7 @@ I review my setup periodically. I check for accounts I no longer use. I rotate w
 
 ## Define Your Strategy, Then Do the Work
 
-If there is one takeaway from this entire journey, it is this: **most people will not do this until something goes wrong.** That is human nature. The threat is abstract until it is personal.
+If there is one takeaway here, it is this: **most people will not do this until something goes wrong.** That is just human nature. The threat feels abstract until it becomes personal.
 
 But you do not have to do everything at once.
 
@@ -218,11 +218,11 @@ Start by asking one question: *what is the most valuable thing I have digitally,
 
 If the answer makes you uncomfortable, fix that one thing. Then move to the next most valuable. Then the next. Build outward from what matters most.
 
-The full audit I did took about a month. I went through every account, every password, every email address, every device, every file storage location. I categorized everything. I migrated what needed migrating. I deleted what no longer served a purpose.
+The full audit took me about a month. I went through every account, every password, every email address, every device, every storage location. I categorized everything. I migrated what needed migrating. I deleted what should not have existed anymore.
 
 It was tedious. It was frustrating. There were accounts I had forgotten existed. There were passwords I had reused without realizing it. There were files in cloud storage that had no business being there.
 
-But when it was done, I had something I had never had before: clarity. I knew exactly what I had, where it was, and how it was protected. And I knew that no single failure — no single compromised device, no single breached service — could take everything down.
+But when it was done, I had something I had never really had before: clarity. I knew what I had, where it lived, and how it was protected. More importantly, I knew that one compromised device or one breached service was no longer enough to take everything down.
 
 ---
 
@@ -230,7 +230,7 @@ But when it was done, I had something I had never had before: clarity. I knew ex
 
 ### If you are just getting started
 
-Pick the most valuable thing you own digitally. Bitcoin? Bank access? Email? Check how it is protected right now. If the answer is "a password I also use elsewhere," fix that today. One password manager. One unique password. One step.
+Pick the most valuable thing you own digitally. Bitcoin. Bank access. Email. Whatever would hurt most. Then check how it is protected right now. If the answer is "a password I also use somewhere else," fix that today. One password manager. One unique password. One step.
 
 Then ask yourself: if someone stole my phone right now, what could they access? The answer will tell you where to focus next.
 
@@ -249,4 +249,3 @@ Do it anyway. The clarity on the other side is worth every minute.
 *I got hacked. That part is real. Specific details about the incident are intentionally omitted for security reasons.*
 
 *Some details in this article are intentionally generalized. The principles are real. The exact configurations are kept vague on purpose — because a detailed public blueprint of your security setup is not a security setup. It is a vulnerability.*
-
