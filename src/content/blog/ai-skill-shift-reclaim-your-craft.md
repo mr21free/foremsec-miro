@@ -2,7 +2,7 @@
 title: AI Skill Shift - Reclaim Your Craft. Focus on What Matters
 description: AI is not about working faster — it’s about working on the right things. A practical perspective on how PMs, designers, and engineers can reclaim time for judgment, strategy, and real product work.
 pubDate: 2026-03-30
-updatedDate: 2026-03-30
+updatedDate: 2026-04-02
 heroImage: ../../assets/blog-reclaim-your-craft.png
 author: Miro Remias
 draft: false
@@ -13,256 +13,164 @@ tags:
 
 ## Why I Didn’t Get Into Product to Sit in Meetings
 
-If you ask most product managers why they chose this path, you’ll hear something like:
+Most product managers do not choose this job because they dream of status updates, calendar Tetris, and five versions of the same alignment conversation.
 
-- understanding customers  
-- solving meaningful problems  
-- shaping direction  
-- making decisions  
+They get into it because they want to understand customers, solve real problems, shape direction, and make better decisions.
 
-You’ll rarely hear:
+Designers are not here for endless handoff loops either. Engineers usually do not wake up excited to spend half the week coordinating dependencies. We all say we want to work on the product. Then a surprising amount of the week gets swallowed by operational drag.
 
-- “I love back-to-back meetings”  
-- “I enjoy writing status updates”  
-- “I want to spend half my week coordinating people”  
+That is the gap AI makes interesting to me.
 
-And yet, that’s where a lot of time goes.
-
-The same is true for designers and engineers.  
-Designers want to design. Engineers want to build.  
-
-But a significant part of the work becomes coordination, repetition, and operational overhead.
-
-That’s the gap.
-
-And that’s why AI is interesting.
-
-Not because it makes us faster.  
-But because it *might* help us get back to the work we actually care about.
+Not because it helps us move faster in some abstract way. Because it might give us more time back for the part of the work we actually care about.
 
 ---
 
 ## The Problem With “AI = Speed”
 
-Most AI conversations start with productivity.
+Most AI conversations flatten into the same promise: write faster, code faster, research faster, ship faster.
 
-- write faster  
-- code faster  
-- research faster  
-- ship faster  
+I get why that framing catches on. It is simple. It demos well. It sounds measurable.
 
-That framing is incomplete.
+It is also incomplete.
 
-In my experience, the bigger question is:
+The more useful question is this:
 
 > What should humans spend their time on now?
 
-Because AI is very good at certain things:
+AI is genuinely good at a few things. It can process a lot of information quickly, summarize messy inputs, draft a first pass, compare patterns, and take repetition out of the system.
 
-- processing large amounts of information  
-- summarizing and structuring  
-- drafting first versions  
-- comparing patterns  
-- reducing repetition  
+What it still does badly is the stuff that usually separates decent products from good ones: judgment, prioritization, taste, context, and deciding what actually matters.
 
-But it is still weak at what actually makes good products:
-
-- judgment  
-- prioritization  
-- taste  
-- understanding context  
-- deciding what matters  
-
-If you only optimize for speed, you risk becoming faster at producing things that shouldn’t exist in the first place.
+If all you optimize for is speed, you can end up getting very efficient at making things that should not exist in the first place.
 
 ---
 
 ## The Real Shift: Time and Attention
 
-The shift is not about tools.
+The shift is not really about tools. It is about where your time goes.
 
-It’s about **time allocation**.
+If AI takes some of the operational weight off the role, the valuable part of the role moves up, not down.
 
-If AI takes over parts of the operational work, then the value of your role moves *up*, not down.
+For PMs, that can mean less coordination and more strategy, judgment, and problem framing.
 
-For a PM:
-- less coordination  
-- more strategy and problem framing  
+For designers, less repetitive production and more attention on interaction quality, product clarity, and decisions.
 
-For a designer:
-- less repetitive production  
-- more interaction quality and decision-making  
+For engineers, less boilerplate and more energy for architecture, tradeoffs, and product thinking.
 
-For an engineer:
-- less boilerplate  
-- more architecture and product thinking  
+In theory, that is the good version of this story.
 
-That sounds great in theory.
-
-But there’s a catch.
+There is a catch.
 
 ---
 
 ## The Trap: Faster at the Wrong Things
 
-This is the biggest risk I see.
+This is the part that worries me most.
 
-AI makes it easy to produce more:
+AI makes it absurdly easy to produce more. More documents. More designs. More code. More ideas. More artifacts that look finished.
 
-- more documents  
-- more designs  
-- more code  
-- more ideas  
+But more output is not the same thing as better outcomes. Sometimes it is just cleaner-looking confusion.
 
-But more output does not mean better outcomes.
+If direction is weak, AI helps you scale weak direction.
 
-If direction is unclear, AI will help you scale confusion.
+If your product thinking is shaky, AI helps you generate polished versions of shaky thinking.
 
-If your product thinking is weak, AI will help you generate more polished versions of weak ideas.
+That is how teams end up with better-formatted noise, faster roadmaps with fuzzy value, and a lot more visible activity without better decisions underneath it.
 
-You end up with:
-
-- better-formatted noise  
-- faster roadmaps with unclear value  
-- more activity without better decisions  
-
-Speed amplifies whatever is already there.
-
-That’s why the most important shift is not technical.  
-It’s behavioral.
+Speed amplifies what is already there. That is why this shift is not mainly technical. It is behavioral.
 
 ---
 
 ## Roles Are Changing (But Not Disappearing)
 
-There’s a lot of talk about roles merging.
+There is a lot of talk right now about roles collapsing into each other. PMs becoming designers. Designers becoming engineers. Everyone becoming a builder.
 
-PMs becoming designers.  
-Designers becoming engineers.  
-Everyone becoming “builders.”
+There is some truth in that. The edges are blurrier than they used to be.
 
-There is some truth to that.
+PMs can prototype more. Designers can work closer to systems. Engineers can contribute earlier to product decisions.
 
-The edges are definitely blurring.
+Still, I do not think the disciplines disappear. They exist for a reason.
 
-- PMs can prototype more  
-- designers can work closer to systems  
-- engineers can engage more with product decisions  
+Good products usually come from the tension between product thinking, design thinking, and engineering thinking. You want those perspectives pushing on each other a little. That tension is healthy.
 
-But I don’t think the disciplines disappear.
+What is changing is the range inside each role. The modern version of the job asks for more flexibility, more range, and more comfort working across boundaries.
 
-They exist for a reason.
-
-Good products come from the tension between:
-- product thinking  
-- design thinking  
-- engineering thinking  
-
-What is changing is not the need for these perspectives.
-
-It’s the **range within each role**.
-
-You’re expected to be more flexible, more hands-on, and more capable across boundaries.
-
-But craft still matters.
+That does not make craft less important. If anything, it makes it easier to notice when craft is missing.
 
 ---
 
 ## What Actually Becomes More Valuable
 
-If I look at how my own work is changing, one thing is clear:
+When I look at my own work, the high-value skills are getting more human, not less.
 
-The highest-value skills are becoming more human, not less.
+I mean things like deciding what *not* to build, spotting the real problem under the noisy one, understanding tradeoffs, setting direction, and holding the quality bar when everyone is under pressure.
 
-Things like:
-- deciding what *not* to build  
-- identifying the real problem  
-- understanding tradeoffs  
-- setting direction  
-- maintaining quality under pressure  
+AI can help around those decisions. It can give you inputs, options, drafts, and synthesis.
 
-AI can support these decisions.
+It still does not make the decision for you.
 
-But it doesn’t make them for you.
-
-In fact, it increases the importance of getting them right.
+In a strange way, that makes good judgment more important, not less. When the cost of producing an answer drops, the cost of choosing the wrong answer becomes more obvious.
 
 ---
 
 ## What I Changed in My Own Workflow
 
-I didn’t try to “use AI everywhere.”
+I did not try to use AI everywhere. That approach gets noisy fast.
 
-That approach quickly turns into noise.
+Instead I asked a smaller question:
 
-Instead, I started with a simpler question:
+> Where am I spending time on work that does not require my best thinking?
 
-> Where am I spending time on work that doesn’t require my best thinking?
+That led to boring, practical changes more than dramatic ones. I started using AI for first drafts, summarizing inputs instead of manually stitching them together, structuring messy information faster, and cutting repetition where I could.
 
-That led to small changes:
-- using AI for first drafts  
-- summarizing inputs instead of manually stitching them  
-- structuring messy information faster  
-- reducing repetition  
+The point was never to crank out more output.
 
-The goal was not more output.
+The point was to create space.
 
-The goal was **creating space**.
-
-Space to think.  
-Space to decide.  
-Space to focus on what actually matters.
+Space to think. Space to decide. Space to focus on the part that actually matters.
 
 ---
 
 ## Lessons Learned
 
-A few things became very clear:
+A few things feel pretty clear to me now:
 
-1. **Speed without direction creates noise**  
-2. **Judgment becomes more valuable, not less**  
-3. **AI is only as good as the context you give it**  
-4. **Roles evolve, but craft still matters**  
-5. **You have to actively protect time for deep work**  
+1. Speed without direction creates noise.
+2. Judgment becomes more valuable, not less.
+3. AI is only as good as the context you give it.
+4. Roles evolve, but craft still matters.
+5. Deep work does not survive by accident. You have to protect it on purpose.
 
 None of this happens automatically.
 
-If you don’t change how you work, AI will just help you do more of the same.
+If you do not change how you work, AI mostly helps you do more of the same, just with nicer formatting.
 
 ---
 
 ## What You Can Do
 
-You don’t need a complex setup to start.
+You do not need some elaborate setup to start.
 
-### If you’re just getting started:
-- Pick one repetitive task from your week  
-- Use AI to reduce the effort there  
-- Observe what changes  
+If you are early, pick one repetitive task from your week and use AI to reduce the effort there. Then pay attention to what that frees up. Do you actually use the time better, or do you just fill it with more admin?
 
-### If you’re more advanced:
-- Define what you want to protect (judgment, strategy, deep thinking)  
-- Define what you are willing to automate  
-- Build simple workflows around that  
+If you are further along, get more explicit. Decide what you want to protect, whether that is judgment, strategy, deep thinking, or quality. Then decide what you are comfortable automating around it. Build simple workflows from there.
 
-The key is not the tool.
+The important part is not the tool stack.
 
-It’s the intention behind how you use it.
+It is the intention behind how you use it.
 
 ---
 
 ## Closing Thought
 
-AI will not automatically make your work better.
+AI will not magically improve your work.
 
-It will make your current way of working more efficient.
+What it usually does is make your current way of working more efficient. That can be great, or it can be a problem, depending on whether your current way of working is actually worth scaling.
 
-So the real question is:
+So the question I keep coming back to is:
 
 > Are you optimizing the right work?
 
-Because the opportunity is not just to move faster.
+The opportunity is not just to move faster.
 
-It’s to reclaim the part of the job that actually matters.
-
-And that is the real skill shift.
+It is to reclaim the part of the job that actually matters. That, to me, is the real skill shift.
