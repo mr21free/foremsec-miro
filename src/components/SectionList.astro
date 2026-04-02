@@ -87,14 +87,14 @@ function isExternal(href: string) {
                                     )}
                                 </h3>
                                 {item.description && (
-                                    <p class="text-xs 2xl:text-lg mt-1 text-base-600">
+                                    <p class="mt-2 text-base leading-7 text-muted">
                                         {item.description}
                                     </p>
                                 )}
                             </div>
 
                             {item.datetime && (
-                                <p class="text-xs 2xl:text-lg text-base-600 lg:ml-auto">
+                                <p class="text-base leading-7 text-muted lg:ml-auto">
                                     <time datetime={item.datetime}>
                                         {item.dateLabel ?? item.datetime}
                                     </time>

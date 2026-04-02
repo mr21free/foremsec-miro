@@ -12,6 +12,7 @@ tags:
   - multisig
   - security
   - privacy
+  - hardware 
 ---
 
 Most people come into Bitcoin the same way. Open an exchange account. Set a password. Buy a little. Maybe trade a little. It feels smooth. It feels modern. For a while, it even feels like the job is done.
@@ -134,7 +135,7 @@ And for one of my keys:
 
 - An **air-gapped signer** (example: Coldcard Mk4) for a tighter security posture — “air-gapped” just means it can operate without a direct wired/wireless connection to your computer, so signing happens offline and only the signed data is transferred. Coldcard official site: https://coldcard.com/
 
-![Seedsigner](/images/posts/blog1_seedsigner-sq.jpeg)
+![Seedsigner](/images/posts/blog1_seedsigner-sq.webp)
 > Custom-built Seedsigner.
 
 ---
@@ -175,7 +176,7 @@ Now you’re not protecting one thing. You’re protecting a system.
 4. **Make long-term storage inconvenient on purpose**  
    If you’re storing long-term, the goal is not fast access—it’s survivability and discipline.
 
-![Seedsigner](/images/posts/blog1_steel_seed-sq.jpeg)
+![Seedsigner](/images/posts/blog1_steel_seed-sq.webp)
 > DIY steel seed.
 
 ---
@@ -208,7 +209,7 @@ How to use it (high-level):
 
 It’s a simple step, but it buys peace of mind: if someone at the bank (or anyone else who somehow accessed the box) looked inside, you’ll have a visible signal.
 
-![Seedsigner](/images/posts/blog1_tamper_envelope-sq.jpeg)
+![Seedsigner](/images/posts/blog1_tamper_envelope-sq.webp)
 > Tamper-evident sealed envelope.
 
 ---

@@ -53,7 +53,7 @@ I also use it for transaction analysis. When I want to inspect a transaction, in
 
 Beyond the technical side, there is something grounding about having the whole blockchain locally. Every block since genesis. Independently verified. On hardware you can hold in your hand. It changes how Bitcoin feels. Less like "an asset I own," more like "a system I participate in."
 
-![Raspberry Pi 5 serving as BTC node](/images/posts/blog2_BTC_node.jpeg)
+![Raspberry Pi 5 serving as BTC node](/images/posts/blog2_BTC_node.webp)
 > Raspberry Pi 5 serving as BTC node.
 
 ---
@@ -122,7 +122,7 @@ The notification system doesn't prevent dust from being sent to you. Nothing can
 
 This kind of monitoring is not technically complex. A few shell scripts, a Signal-compatible notification client, and a cron job. But it changes how you relate to your Bitcoin setup. You stop hoping everything is fine and start actually knowing what is happening.
 
-![Daily Signal Notification](/images/posts/blog2_signal_notification.jpg)
+![Daily Signal Notification](/images/posts/blog2_signal_notification.webp)
 > Daily Signal Notification.
 
 ---

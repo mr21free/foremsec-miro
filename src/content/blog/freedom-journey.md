@@ -54,7 +54,7 @@ But somewhere in my twenties, an idea started circling my head and would not lea
 - **In mid-life**, you have money and energy, but no time.
 - **When you are old**, you have money and time, but no energy.
 
-![Time, Energy and Money](/images/posts/blog11_different_generations.jpeg)
+![Time, Energy and Money](/images/posts/blog11_different_generations.webp)
 > Time, Energy and Money.
 
 I did not want the mid-life trade. I did not want to be the person who says on Monday morning, *"When is Friday?"* and lives for weekends like a prisoner lives for yard time.

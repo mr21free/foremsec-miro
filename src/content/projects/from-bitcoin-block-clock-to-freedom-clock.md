@@ -43,7 +43,7 @@ A block clock makes that tangible.
 
 You glance at it. No apps. No exchanges. No drama. Just: *the network is alive, and it keeps moving.*
 
-![Block Clock](/images/posts/blog8_block_clock-sq.jpeg)
+![Block Clock](/images/posts/blog8_block_clock-sq.webp)
 > Custom-built Block Clock.
 
 And then, after the novelty wore off, I ran into an annoying truth:
@@ -118,10 +118,10 @@ But a different purpose:
 > **Not “Bitcoin ticks.”**  
 > **“How much freedom have I bought?”**
 
-![Freedom Clock - Short Time](/images/posts/blog8_freedom_clock_short_time-sq.jpeg)
+![Freedom Clock - Short Time](/images/posts/blog8_freedom_clock_short_time-sq.webp)
 > Portfolio value in units of freedom - quite some stacking needs to be done.
 
-![Freedom Clock - Long Time](/images/posts/blog8_freedom_clock_long_time-sq.jpeg)
+![Freedom Clock - Long Time](/images/posts/blog8_freedom_clock_long_time-sq.webp)
 > Much more freedom ahead.
 
 

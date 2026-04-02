@@ -40,8 +40,8 @@ const { title, description, actions = [], role, location } = Astro.props as Prop
       </div>
 
       <div class="md:col-span-1">
-        {description && <p class="text-sm 2xl:text-xl text-base-600">{description}</p>}
-        {location && <p class="text-sm text-base-600 mt-2">{location}</p>}
+        {description && <p class="text-base leading-7 text-muted">{description}</p>}
+        {location && <p class="mt-2 text-base leading-7 text-muted">{location}</p>}
       </div>
 
       <div class="md:col-span-1 flex items-start md:justify-end">

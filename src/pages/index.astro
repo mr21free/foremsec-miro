@@ -13,7 +13,11 @@ const cv = (await getCollection("cv" as any)) as any[];
 const site = await getSite();
 ---
 
-<PageLayout>
+<PageLayout
+	title={site.author.name || 'Miro Remias'}
+	description={site.author.bio || 'Discover, understand and find solution.'}
+	image="/images/profile/miro-768.webp"
+>
 	<Hero
 		title={site.author.name || 'MIRO REMIAS'}
 		description={site.author.bio || 'Welcome to my personal website.'}
@@ -23,13 +27,13 @@ const site = await getSite();
 
 	<ProjectList
 		heading="Projects"
-		limit={3}
+		limit={1}
 		viewAllHref="/projects"
 	/>
 
 	<PostList
 		heading="Blog"
-		limit={3}
+		limit={1}
 		viewAllHref="/blog"
 	/>
 

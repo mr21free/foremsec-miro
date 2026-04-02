@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
 import FormattedDate from './FormattedDate.astro';
 
@@ -20,6 +21,7 @@ const hasSlot = Astro.slots.has('default');
 const imageSrc = typeof image === 'string' ? image : image?.src;
 const imageWidth = typeof image === 'string' ? undefined : image?.width;
 const imageHeight = typeof image === 'string' ? undefined : image?.height;
+const imageIsMetadata = typeof image !== 'string' && !!image;
 ---
 
 <article
@@ -32,18 +34,31 @@ const imageHeight = typeof image === 'string' ? undefined : image?.height;
 >
 	<a class="sr-only" {...aProps}>Ver {title}</a>
 
-	{imageSrc && (
-		<figure class="m-0 relative aspect-[12/7] overflow-hidden rounded-[1.5rem] bg-[color-mix(in_oklab,var(--color-ink)_4%,var(--color-surface))]">
-			<img
-				src={imageSrc}
-				alt={imageAlt}
-				loading="lazy"
-				width={imageWidth}
-				height={imageHeight}
-				class="absolute inset-0 block h-full w-full object-cover object-top transition duration-400 group-hover:scale-[1.05]"
-			/>
-		</figure>
-	)}
+		{imageSrc && (
+			<figure class="m-0 relative aspect-[12/7] overflow-hidden rounded-[1.5rem] bg-[color-mix(in_oklab,var(--color-ink)_4%,var(--color-surface))]">
+				{imageIsMetadata ? (
+					<Image
+						src={image as ImageMetadata}
+						alt={imageAlt}
+						width={720}
+						height={420}
+						loading="lazy"
+						format="webp"
+						quality={82}
+						class="absolute inset-0 block h-full w-full object-cover object-top transition duration-400 group-hover:scale-[1.05]"
+					/>
+				) : (
+					<img
+						src={imageSrc}
+						alt={imageAlt}
+						loading="lazy"
+						width={imageWidth}
+						height={imageHeight}
+						class="absolute inset-0 block h-full w-full object-cover object-top transition duration-400 group-hover:scale-[1.05]"
+					/>
+				)}
+			</figure>
+		)}
 
 	<div class="mt-3">
 		<h3 class="m-0 text-sm 2xl:text-xl text-[color:var(--color-primary)] font-bold uppercase leading-[1.18]">

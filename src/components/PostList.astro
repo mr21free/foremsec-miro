@@ -1,7 +1,7 @@
 ---
-
-import BlogCard from './BlogCard.astro';
+import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
+import FormattedDate from './FormattedDate.astro';
 import { withBase } from '../utils/slugify';
 
 interface RawPost {
@@ -36,7 +36,7 @@ export interface Props {
 let {
     heading = "Blog",
     posts = [],
-    limit = 6,
+    limit = 1,
     viewAllHref,
     viewAllLabel = "ALL BLOGS",
 } = Astro.props as Props;
@@ -87,9 +87,7 @@ const visiblePosts = typeof limit === "number" ? posts.slice(0, limit) : posts;
             </div>
 
             <div class="lg:col-span-2 space-y-10">
-            <div
-                class="grid grid-cols-1 md:grid-cols-2 gap-8"
-            >
+            <div class="w-full">
                 {
                     visiblePosts.map((post) => {
                         const p = getPostData(post) || {};
@@ -107,14 +105,41 @@ const visiblePosts = typeof limit === "number" ? posts.slice(0, limit) : posts;
                             : null;
 
                         return (
-                            <BlogCard
-                                title={p.title}
-                                href={href}
-                                image={p.heroImage}
-                                imageAlt={p.title}
-                                description={p.description}
-                                date={pubDate}
-                            />
+                            <article class="group py-2">
+                                <a class="grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1fr)_17rem] lg:gap-6 lg:items-start" href={href}>
+                                    <div class="order-2 flex min-w-0 flex-col justify-start lg:order-1">
+                                        <h3 class="text-2xl font-semibold leading-tight text-ink transition duration-200 group-hover:text-[color:var(--color-primary)]">
+                                            {p.title}
+                                        </h3>
+                                        {pubDate && (
+                                            <p class="mt-2 text-sm text-muted">
+                                                <FormattedDate date={pubDate} />
+                                            </p>
+                                        )}
+                                        {p.description && (
+                                            <p class="mt-4 text-base leading-7 text-muted">
+                                                {p.description}
+                                            </p>
+                                        )}
+                                    </div>
+                                    <div class="order-1 lg:order-2">
+                                        {p.heroImage && (
+                                            <figure class="m-0 overflow-hidden rounded-[1.5rem] bg-[color-mix(in_oklab,var(--color-ink)_4%,var(--color-surface))]">
+                                                <Image
+                                                    src={p.heroImage}
+                                                    alt={p.title}
+                                                    width={720}
+                                                    height={420}
+                                                    loading="lazy"
+                                                    format="webp"
+                                                    quality={82}
+                                                    class="block h-full w-full object-cover object-top transition duration-300 group-hover:scale-[1.03]"
+                                                />
+                                            </figure>
+                                        )}
+                                    </div>
+                                </a>
+                            </article>
                         );
                     })
                 }

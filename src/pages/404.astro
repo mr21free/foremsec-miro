@@ -4,25 +4,27 @@ import { withBase } from '../utils/slugify';
 ---
 
 <PageLayout title="Page not found" description="Even the honey badger couldn’t find this page.">
-  <section class="content-shell py-10 md:py-14">
-    <div class="mx-auto flex max-w-4xl flex-col items-center gap-6 text-center">
-      <p class="m-0 text-3xl font-semibold leading-tight text-ink sm:text-4xl">Oops...</p>
+  <section class="content-shell py-12 space-y-10">
+    <header class="mx-auto w-full max-w-4xl space-y-2">
+      <p class="text-sm uppercase tracking-[0.3em] text-muted">404</p>
+      <h1 class="text-3xl font-semibold text-ink sm:text-4xl">Even the honey badger couldn&apos;t find this page.</h1>
+      <p class="max-w-3xl text-base leading-7 text-muted">
+        The link may be broken, the page may have moved, or you may have wandered into the wrong corner of the internet.
+      </p>
+    </header>
 
+    <div class="mx-auto flex max-w-4xl flex-col items-center gap-8 text-center">
       <img
-        src={withBase('/images/honey-badger-404.png')}
+        src={withBase('/images/honey-badger-404.webp')}
         alt="Confused honey badger under the moon"
         width="1536"
         height="1024"
-        class="w-full max-w-4xl rounded-[2rem] border border-[color-mix(in_oklab,var(--color-ink)_12%,transparent)]"
+        class="w-full rounded-[1.5rem] bg-[color-mix(in_oklab,var(--color-ink)_4%,var(--color-surface))]"
         loading="eager"
         decoding="async"
       />
 
-      <h1 class="m-0 text-3xl font-semibold leading-tight text-ink sm:text-4xl">
-        Even the honey badger couldn&apos;t find this page.
-      </h1>
-
-      <a class="button primary" href={withBase('/')}>Take Me Home</a>
+      <a class="button secondary" href={withBase('/')}>Go to Home Page</a>
     </div>
   </section>
 </PageLayout>
