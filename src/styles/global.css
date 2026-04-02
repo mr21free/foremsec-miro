@@ -66,10 +66,6 @@
 		text-decoration: none;
 	}
 
-	time {
-  		font-family: var(--font-mono);
-	}
-
 	.sr-only {
 		position: absolute;
 		width: 1px;
@@ -251,12 +247,20 @@
 		flex-wrap: wrap;
 		align-items: center;
 		gap: 0.45rem;
+		font-family: var(--font-sans);
+		font-variant-numeric: tabular-nums;
 	}
 
 	.post-meta-item {
 		display: inline-flex;
 		align-items: center;
 		gap: 0.35rem;
+	}
+
+	.post-meta time,
+	.post-card-date time {
+		font: inherit;
+		font-variant-numeric: tabular-nums;
 	}
 
 	.post-meta-item + .post-meta-item::before {
