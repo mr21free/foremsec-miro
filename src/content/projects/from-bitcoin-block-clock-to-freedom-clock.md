@@ -1,8 +1,8 @@
 ---
 title: From Block Clock to Freedom Clock - The Metric That Finally Clicked
-description: I built a Bitcoin block clock for protocol time. Then rebuilt it as a Freedom Clock that measures what humans actually feel - saved time and runway.
+description: "I built a Bitcoin block clock because protocol time fascinated me. Then I rebuilt it into something that made more sense to my actual life: a Freedom Clock that measures runway, saved time, and what Bitcoin is really buying me."
 pubDate: 2026-02-12
-updatedDate: 2026-02-12
+updatedDate: 2026-04-02
 heroImage: ../../assets/blog-block-clock.png
 author: Miro Remias
 draft: false
@@ -11,17 +11,19 @@ tags:
   - hardware
 ---
 
-## The moment the “block clock” stopped working for me
+## The moment the block clock stopped clicking for me
 
-Every hardcore Bitcoiner should have a block clock. Period.
+I loved the idea of a block clock long before I built one.
 
-So I started doing what we all do: research. I looked at what’s out there, compared options, and tried to imagine which one I’d actually live with.
+It has a certain Bitcoiner elegance to it. No apps. No exchange tabs. No endless refreshing. Just protocol time, quietly moving forward in the background.
 
-And I bounced off most of them.
+So I did what builders usually do. I looked at what was already out there, compared options, and tried to picture which one I would actually want on my desk every day.
 
-Some were great-looking but felt like expensive furniture. Some were locked into a closed ecosystem. Some were bigger than what I wanted on a desk. And in a few cases, the price was high enough that I caught myself thinking: *wait… why am I paying this much for a glorified screen?*
+And honestly, I bounced off most of them.
 
-So I did the predictable builder thing: **I decided to build my own.**
+Some looked beautiful but felt more like expensive decor than something I wanted to live with. Some were closed. Some were too large. And a few were priced high enough that I caught myself thinking: *hang on, am I really about to pay this much for a tiny screen and a vibe?*
+
+So I did the predictable thing: **I built my own.**
 
 How hard can it be, right?
 
@@ -29,11 +31,11 @@ I already had a Bitcoin node, and I was already generating Bitcoin-related signa
 
 Then I found exactly what I needed: a small e-ink board with Wi-Fi and the option to run on a battery.
 
-The goal was simple: a calm, always-on Bitcoin clock I could place wherever I wanted, without charging it all the time.
+The goal was simple: a calm, always-on Bitcoin clock I could put anywhere without constantly thinking about the battery.
 
 That’s how the first version started.
 
-I built a Bitcoin block clock because I love the idea of **protocol time**.
+I built it because I genuinely love the idea of **protocol time**.
 
 Bitcoin clicks forward like a charm: block by block, roughly every ~10 minutes, indifferent to narratives.
 
@@ -44,7 +46,7 @@ You glance at it. No apps. No exchanges. No drama. Just: *the network is alive, 
 ![Block Clock](/images/posts/blog8_block_clock-sq.jpeg)
 > Custom-built Block Clock.
 
-And… after the novelty wore off, I ran into an annoying truth:
+And then, after the novelty wore off, I ran into an annoying truth:
 
 **My brain doesn’t live in blocks. It lives in time on this earth.**
 
@@ -58,7 +60,7 @@ It immediately translated it into:
 
 > “Cool. So… a few years.”
 
-That number is accurate. But it’s not *human-meaningful*.
+That number is correct. It just does not feel *human*.
 
 ---
 
@@ -71,7 +73,7 @@ Bitcoin time is objective.
 - difficulty adjustment
 - halving cycles
 
-Human time is emotional.
+Human time is more emotional.
 
 - mornings and evenings
 - birthdays and school years
@@ -125,7 +127,7 @@ But a different purpose:
 
 ### What it shows (conceptually)
 
-I’m keeping the exact implementation private on purpose (OPSEC), but I can share a screenshot with **sample values** (e.g., “free time” + BTC price) to show the idea without exposing anything sensitive.
+I am keeping the exact implementation private on purpose for OPSEC reasons, but I can share a screenshot with **sample values** (for example, "free time" plus BTC price) to show the idea without exposing anything sensitive.
 
 The Freedom Clock is built around **one core metric**:
 
@@ -158,7 +160,7 @@ Runway makes you ask:
 - “What would I do if I had 6 months more freedom?”
 - “Am I building the life I want *or just surviving until Friday*?”
 
-That’s why this device finally clicked for me. (Bonus: I showed it to my wife and she understood it immediately — and said I finally built something useful, not just another technical gadget. 😄)
+That is why this device finally clicked for me. As a bonus, I showed it to my wife and she understood it immediately, then told me I had finally built something useful instead of just another technical gadget.
 
 ---
 
@@ -185,7 +187,7 @@ It’s choosing a metric that changes your behavior.
 
 A dashboard can be technically perfect and still be useless.
 
-If the screen goes dark tomorrow, what would you actually miss?
+If the screen went dark tomorrow, what would you actually miss?
 
 That question is brutal. And helpful.
 
@@ -211,7 +213,7 @@ I’m thinking about evolving the device into a rotation of views:
 - Freedom-native motivation (runway as time, abstracted safely)
 - Builder-native sanity (last update, battery, health)
 
-And I’ll probably keep iterating the name, too. Right now, **Freedom Clock** is the best fit because it says the quiet part out loud:
+And I will probably keep iterating on the name too. Right now, **Freedom Clock** is the best fit because it says the quiet part out loud:
 
 Bitcoin isn’t just a network. It’s a tool for *reclaiming your time*.
 
@@ -219,7 +221,7 @@ Bitcoin isn’t just a network. It’s a tool for *reclaiming your time*.
 
 ### Freedom has more than one meaning
 
-“Freedom” isn’t just one thing — people chase different versions of it:
+"Freedom" is not just one thing. People chase different versions of it:
 
 - **Time freedom:** you control your schedule and how you spend your days.
 - **Location freedom:** you can live/work from where you prefer (digital nomads are the classic example).

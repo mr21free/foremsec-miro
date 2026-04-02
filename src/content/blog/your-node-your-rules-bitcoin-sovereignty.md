@@ -1,8 +1,8 @@
 ---
 title: Your Node, Your Rules - From Wallet to Full Bitcoin Sovereignty
-description: Most Bitcoin wallets quietly trust someone else's node. Here's what it took to close that gap — hardware, software, security tradeoffs, and what sovereignty actually feels like once the blockchain finishes syncing.
+description: "Most Bitcoin wallets quietly rely on someone else’s node. This is what it took me to close that gap myself, and why running my own node changed how Bitcoin feels."
 pubDate: 2026-03-24
-updatedDate: 2026-03-24
+updatedDate: 2026-04-02
 heroImage: ../../assets/blog-btc-node.png
 author: Miro Remias
 draft: false
@@ -14,20 +14,23 @@ tags:
   - hardware
 ---
 
-There is a specific moment when the Bitcoin blockchain finishes syncing onto hardware you own.
-No API key. No third-party server. No trust required. Just you, the full ledger, and a quiet box humming in the corner.
+There is a specific moment when the Bitcoin blockchain finishes syncing on hardware you own.
 
-That feeling has a name: sovereignty. And once you have it, going back feels like handing the keys to someone else and hoping they're honest.
+No API key. No third-party server. No quiet dependency you’re pretending not to think about. Just you, the full ledger, and a small machine in the corner doing the verification itself.
 
-This is the story of why I built a personal Bitcoin node, what it actually took, and what I learned along the way.
+That feeling has a name: sovereignty.
+
+And once you feel it, it becomes very hard to go back to the default setup where your wallet quietly asks someone else’s infrastructure what is true.
+
+This is the story of why I built my own node, what it actually took, and what changed once I did.
 
 ---
 
 ## What a Bitcoin Node Actually Does
 
-Most people interacting with Bitcoin are doing so through a node they don't control.
+Most people who use Bitcoin are doing it through a node they do not control.
 
-Your mobile wallet? It's querying someone else's server to check your balance. Your portfolio tracker? Same. Even many "non-custodial" wallets phone home to third-party infrastructure. That server learns your addresses, your balance history, your transaction timing. It's not hypothetical — it's the default.
+Your mobile wallet? It is probably querying someone else's server to check your balance. Your portfolio tracker? Same story. Even many "non-custodial" wallets quietly phone home to third-party infrastructure. That server learns your addresses, your balance history, your transaction timing. This is not some edge case. It is the default.
 
 A Bitcoin node independently validates every transaction and block against the protocol rules. It does not trust anyone else's interpretation of the chain. It checks for itself.
 
@@ -38,17 +41,17 @@ When your wallet connects to your own node instead of a public one, a few things
 - You are not dependent on any service staying online or staying honest
 - You can query the chain directly: transaction history, UTXO sets, mempool state
 
-The network also benefits slightly. Every node strengthens decentralization. Running one is a small contribution to the infrastructure that makes Bitcoin function without a central authority. It's not obligatory, but it's meaningful.
+The network also benefits a little. Every node strengthens decentralization. Running one is a small contribution to the infrastructure that lets Bitcoin function without a central authority. It is not obligatory, but I do think it matters.
 
 ---
 
 ## Why I Built One
 
-My use case is specific. I run read-only wallet descriptors on the node to track wallet movements in real time. Every incoming and outgoing transaction triggers an alert delivered to Signal — amount, counterpart address, direction. No app, no third-party notification service, no privacy leak. Just my node watching the chain and telling me what changed.
+My use case is pretty specific. I run read-only wallet descriptors on the node to track wallet movements in real time. Every incoming and outgoing transaction triggers an alert delivered to Signal: amount, counterpart address, direction. No app, no third-party notification service, no privacy leak. Just my node watching the chain and telling me what changed.
 
-I also use it for transaction analysis. When I want to investigate a transaction — inputs, outputs, fee rate, UTXO origin — I query my own node directly from the terminal. It's not as visual as a browser-based mempool explorer, but it's accurate, private, and always available.
+I also use it for transaction analysis. When I want to inspect a transaction, inputs, outputs, fee rate, UTXO origin, I query my own node directly from the terminal. It is not as visual as a browser-based mempool explorer, but it is accurate, private, and always there.
 
-Beyond the technical, there's something grounding about having the whole blockchain locally. Every block since the genesis block. Independently verified. On hardware you can hold in your hand. It reframes how you think about Bitcoin from "asset I own" to "system I participate in."
+Beyond the technical side, there is something grounding about having the whole blockchain locally. Every block since genesis. Independently verified. On hardware you can hold in your hand. It changes how Bitcoin feels. Less like "an asset I own," more like "a system I participate in."
 
 ![Raspberry Pi 5 serving as BTC node](/images/posts/blog2_BTC_node.jpeg)
 > Raspberry Pi 5 serving as BTC node.
@@ -57,13 +60,13 @@ Beyond the technical, there's something grounding about having the whole blockch
 
 ## What You Actually Need to Build One
 
-The hardware story is simpler than people assume.
+The hardware side is simpler than people assume.
 
 My build is a Raspberry Pi 5 with 4GB of RAM, a 2TB NVMe SSD mounted via a dedicated NVMe base board, the official active cooler, and the official power supply. The blockchain currently uses roughly half of that storage, with room to grow for several more years. The machine is small, quiet, draws minimal power, and looks like nothing. No one glancing at your desk would guess it's running financial infrastructure. That's a feature, not a coincidence.
 
 The total landed cost was around 200 CHF for the full custom build — board, NVMe drive, NVMe base, active cooling, and power supply included. No shortcuts.
 
-One non-obvious hardware note: **connect it via LAN, not Wi-Fi.** A node syncing the full blockchain and serving wallet queries is a sustained, heavy workload. Wi-Fi adds latency, occasional dropouts, and interference you simply don't want on infrastructure you're relying on. A direct Ethernet connection is the baseline, not a nice-to-have.
+One non-obvious hardware note: **connect it via LAN, not Wi-Fi.** A node syncing the full blockchain and serving wallet queries is a sustained workload. Wi-Fi adds latency, occasional dropouts, and interference you just do not want on infrastructure you rely on. A direct Ethernet connection is the baseline, not a nice-to-have.
 
 If you want to go further and run your own mempool visualizer — a self-hosted version of mempool.space, which gives you a full graphical view of the transaction pool — plan for at least 8GB of RAM and additional storage for full transaction indexing. It's a different hardware class, and I chose not to run it on this machine. Terminal access covers my needs. But if you want the visual layer, factor that into your hardware decision upfront.
 
@@ -75,13 +78,13 @@ One thing worth doing immediately once you have a stable setup: write a backup s
 
 I run the latest stable release of Bitcoin Core. There is an ongoing debate in the Bitcoin community between Core and Bitcoin Knots, which is a fork of Core with additional filtering options — particularly around what transactions are allowed into the mempool. Both are legitimate full node implementations. Both verify the chain to the same consensus rules.
 
-I don't have a strong opinion on which one is better for your use case. Core is the most widely tested implementation with the largest contributor base. Knots is smaller but maintained by a developer with a long track record. Read the debate, form your own view, and pick one. Either way you're running a full node.
+I do not have a strong opinion on which one is better for your use case. Core is the most widely tested implementation with the largest contributor base. Knots is smaller but maintained by a developer with a long track record. Read the debate, form your own view, and pick one. Either way, you are running a full node.
 
 ---
 
 ## Security: Locking It Down
 
-A node you can't trust is worse than no node. Security here is not optional.
+A node you do not trust is worse than no node. Security here is not optional.
 
 A few principles I applied:
 
@@ -117,7 +120,7 @@ When you receive an alert the moment any transaction hits your wallet, you see t
 
 The notification system doesn't prevent dust from being sent to you. Nothing can. But it closes the window of ignorance, which is the only part of the attack you can actually control.
 
-This kind of monitoring is not technically complex. A few shell scripts, a Signal-compatible notification client, and a cron job. But it changes how you interact with your Bitcoin setup from passive to active. You know what's happening as it happens.
+This kind of monitoring is not technically complex. A few shell scripts, a Signal-compatible notification client, and a cron job. But it changes how you relate to your Bitcoin setup. You stop hoping everything is fine and start actually knowing what is happening.
 
 ![Daily Signal Notification](/images/posts/blog2_signal_notification.jpg)
 > Daily Signal Notification.
@@ -132,7 +135,7 @@ One example: a Bitcoin block clock. Since your node knows the current block heig
 
 https://miro.foremsec.com/blog/from-bitcoin-block-clock-to-freedom-clock/
 
-That's one example. The broader point is that a node makes you a first-class participant in the network, with local access to chain data that most people only reach through someone else's API.
+That is one example. The broader point is that a node makes you a first-class participant in the network, with local access to chain data that most people only touch through someone else's API.
 
 ---
 

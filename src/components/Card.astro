@@ -49,15 +49,13 @@ const aProps = { href, 'aria-label': `Ver ${title}`, ...(isExternal ? { rel: 'no
 				<span class="relative z-10">{title}</span>
 			</h3>
 
-			{description && <p class="m-0 mt-2 text-xs 2xl:text-lg text-[color-mix(in_srgb,var(--color-primary)_70%,var(--color-text-light)_30%)]">{description}</p>}
-			{baseDate && (
-				<p class="m-0 mt-3 text-xs 2xl:text-lg text-base-600">
-					<time datetime={baseDate.toISOString()}>
+				{description && <p class="m-0 mt-2 text-xs 2xl:text-lg text-[color-mix(in_srgb,var(--color-primary)_70%,var(--color-text-light)_30%)]">{description}</p>}
+				{baseDate && (
+					<p class="m-0 mt-3 text-xs 2xl:text-lg text-base-600">
 						<FormattedDate date={baseDate} />
-					</time>
-				</p>
-			)}
-		</div>
+					</p>
+				)}
+			</div>
 
 		{hasSlot && (
 			<div class="relative z-10 mt-2 lg:col-span-full mt-auto pt-2 text-[0.95rem] text-[color-mix(in_srgb,var(--color-primary)_70%,var(--color-text-light)_30%)]">

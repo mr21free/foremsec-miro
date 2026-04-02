@@ -1,8 +1,8 @@
 ---
 title: Buying Bitcoin is easy. Custody is the problem — from exchange to multisig.
-description: Custody becomes the real challenge after buying Bitcoin. How I moved from exchanges to cold storage and a 2-of-3 multisig setup—key decisions, tradeoffs, and lessons learned.
+description: "Buying Bitcoin is the easy part. Keeping it safe for years is where things get real. This is how I moved from exchanges to cold storage and eventually to 2-of-3 multisig, and what I learned in the process."
 pubDate: 2026-02-11
-updatedDate: 2026-02-11
+updatedDate: 2026-04-02
 heroImage: ../../assets/blog-multisig.png
 author: Miro Remias
 draft: false
@@ -14,25 +14,27 @@ tags:
   - privacy
 ---
 
-Most people enter Bitcoin the same way: open an exchange account, set a password, buy a little, maybe trade a little. It’s smooth. It feels modern. For a while it feels “done.”
+Most people come into Bitcoin the same way. Open an exchange account. Set a password. Buy a little. Maybe trade a little. It feels smooth. It feels modern. For a while, it even feels like the job is done.
 
 Then the real problem shows up.
 
 Not the buying part. The **custody** part.
 
-Because once your stack becomes meaningful—life-changing money, or simply money you’d hate to lose—“convenient” starts to feel fragile. The question becomes:
+Because once your stack becomes meaningful, whether that means life-changing money or just an amount you really do not want to lose, "convenient" starts to feel fragile. The question changes too:
 
 **Who actually controls the keys?**
 
-I learned that lesson early. Some exchanges have failed over the years (Mt. Gox being the most famous example), and when that happens, customers can lose access to funds — but don’t worry, this isn’t meant to scare you off; it’s meant to help you make calm, practical choices. That’s when “not your keys, not your coins” stopped being a slogan and became an operating rule.
+I learned that lesson fairly early. Exchanges fail. Policies change. Access gets interrupted. Mt. Gox is the famous example, but the broader lesson matters more than the history lesson: if somebody else controls the keys, you are depending on their competence and their continued existence.
 
-This post is my custody journey—from the early “I’ll do something simple” phase to a setup that’s designed to survive mistakes, accidents, and time. No step-by-step here—just the mental model, the tradeoffs, and how I think about risk.
+That was the point where “not your keys, not your coins” stopped sounding like a slogan and started sounding like an operating rule.
+
+This post is my custody journey, from the early "I'll just do something simple" phase to a setup designed to survive mistakes, accidents, and time. No step-by-step tutorial here. Just the mental model, the tradeoffs, and the way I think about risk now.
 
 ---
 
 ## The first custody upgrade: move from “account” to “keys”
 
-An exchange is great UX. It’s also a dependency. Your access depends on their availability, their policies, their security, and sometimes their interpretation of your identity.
+An exchange is great UX. It is also a dependency. Your access depends on their availability, their policies, their security, and sometimes their interpretation of your identity.
 
 Self-custody flips that:
 
@@ -50,7 +52,7 @@ The moment you self-custody, you also take ownership of backups, recovery, physi
 
 ## My early phase: “brain wallet” (and why I stopped)
 
-Years ago, I used a “brain wallet” approach (using tools like https://www.bitaddress.org/): I had a secret sentence in my head, and that deterministically generated a Bitcoin wallet.
+Years ago, I used a "brain wallet" approach (using tools like https://www.bitaddress.org/): I had a secret sentence in my head, and that deterministically generated a Bitcoin wallet.
 
 It worked for me for years. It also had two huge problems:
 
@@ -59,11 +61,11 @@ It worked for me for years. It also had two huge problems:
 
 ### My second mistake: “I’ll back it up in the cloud, encrypted”
 
-Later, I realized my brain password was too short, so I extended it to 30+ characters to withstand brute force. I migrated that wallet to something more secure—but I was still the main point of failure.
+Later, I realized my brain password was too short, so I extended it to 30+ characters to withstand brute force. I migrated that wallet to something more secure, but I was still the main point of failure.
 
 So I decided to back it up. I saved a wallet PDF, compressed it into a password-protected ZIP (standard ZIP), and stored it on a cloud drive.
 
-Surprise, surprise — that setup eventually got compromised, and the file was gone.
+Unsurprisingly, that setup eventually got compromised, and the file was gone.
 
 I got lucky because I named it in a strange way, so it wasn’t obvious it was Bitcoin-related. But luck is not a custody plan. If someone had targeted it, brute force could have been a real concern.
 
@@ -82,16 +84,16 @@ If you encrypt files for other purposes, the details matter (ZIP vs AES-256, for
 
 Once hardware wallets became mainstream, I moved from “brain wallet” to cold storage — and that also changed how wallets are typically generated: instead of a single password, you usually get 12–24 words from a known dictionary, and those words form the secret most people call a **seed** (or seed phrase).
 
-Hardware wallets are powerful because your private keys don’t need to touch an internet-connected computer. They also add practical protections:
+Hardware wallets are powerful because your private keys do not need to touch an internet-connected computer. They also add practical protections:
 
 - **PIN** (device access control)
 - **Passphrase** (an extra secret on top of the seed — often described as a “25th word”)
 
-That’s great. But it also reveals the trap:
+That is great. But it also reveals the trap:
 
 **The backup becomes the most important thing to protect.**
 
-If someone steals your seed phrase backup, they can recreate your wallet. If you lose your device and your backup, you can lock yourself out — and congratulations, you’ve just reinvented the 9–5: start from zero and stack again.
+If someone steals your seed phrase backup, they can recreate your wallet. If you lose your device and your backup, you can lock yourself out, and congratulations, you have just reinvented the 9-to-5: start from zero and stack again.
 
 So the key question becomes:
 
@@ -99,7 +101,7 @@ So the key question becomes:
 
 ### Not all hardware wallets are the same
 
-My first hardware wallet was Ledger (https://www.ledger.com/) — back then, the fact it supported lots of coins felt like an advantage. Today, for my use case (Bitcoin only), I don’t see that as a benefit anymore: BTC-only wallets tend to have a tighter security focus and a smaller attack surface.
+My first hardware wallet was Ledger (https://www.ledger.com/). Back then, the fact it supported lots of coins felt like an advantage. Today, for my use case (Bitcoin only), I do not see that as a benefit anymore. BTC-only wallets tend to have a tighter security focus and a smaller attack surface.
 
 Later, Ledger introduced a subscription recovery service designed to help users recover access by splitting and storing encrypted fragments with providers — and that goes against the Bitcoin ethos for me, so I wasn’t fine with it.
 
@@ -117,11 +119,11 @@ Trust is always part of the conversation in Bitcoin. I prefer tools where the se
 
 ## When your stack grows: multisig reduces single points of failure
 
-If you’re storing meaningful amounts long term, a single-seed wallet can start to feel too fragile. That’s where multisig becomes attractive.
+If you are storing meaningful amounts long term, a single-seed wallet can start to feel too fragile. That is where multisig becomes attractive.
 
 In Bitcoin, a **2-of-3 multisig** means you have 3 independent keys, and any 2 can spend. There are plenty of other quorums too (e.g., 3-of-5, 3-of-7, etc.) — 2-of-3 is just a common starting point.
 
-The point isn’t “more complexity is always better.” The point is simple: one key can be lost or stolen without you losing everything, because you can spread risk across keys, locations, and people.
+The point is not "more complexity is always better." The point is simple: one key can be lost or stolen without you losing everything, because you can spread risk across keys, locations, and people.
 
 ### What I typically use (high-level)
 
@@ -139,7 +141,7 @@ And for one of my keys:
 
 ## The hard part isn’t multisig. It’s storing the secrets.
 
-Creating a multisig wallet is the easy part; storing it safely for years is the hard part.
+Creating a multisig wallet is the easy part. Storing it safely for years is the hard part.
 
 With 2-of-3 multisig, you already have:
 
@@ -273,7 +275,7 @@ Whether it’s the right choice for you depends on your risk profile and what yo
 
 ## Wallet descriptor storage: don’t keep it “loose”
 
-The wallet descriptor isn’t a private key by itself, but losing it can turn recovery into painful trial-and-error. Treat it like **critical recovery metadata** — and also as **privacy-sensitive** information: in the wrong hands it can help someone identify and link your wallet addresses (connect the dots), even if they still can’t spend without your keys.
+The wallet descriptor is not a private key by itself, but losing it can turn recovery into painful trial and error. Treat it like **critical recovery metadata**, and also as **privacy-sensitive** information. In the wrong hands, it can help someone identify and link your wallet addresses, even if they still cannot spend without your keys.
 
 A solid approach is to store the descriptor on a **hardware-encrypted USB key** (or another offline medium you trust), keep **redundant copies** in separate locations, and protect access with a strong password.
 
@@ -293,7 +295,7 @@ You can also use a VPN while ordering to reduce how directly your IP address map
 
 ## What will this cost?
 
-Multisig isn’t “free”—you’re buying **resilience and sleep**.
+Multisig is not "free." You are buying **resilience and sleep**.
 
 Here are ballpark numbers (EUR) to make it concrete:
 
@@ -373,7 +375,7 @@ The good news: collaborative custody solutions can make these ideas much easier 
 
 ## The biggest lesson learned: I sleep better
 
-The best “feature” of a serious custody setup isn’t technical. It’s psychological.
+The best "feature" of a serious custody setup is not technical. It is psychological.
 
 If you’ve ever paid off a mortgage (or any big debt), you know the feeling: you *think* you understand it… until it happens. Then it’s like a big rock quietly slides off your chest. You breathe differently. You stop checking. You feel lighter.
 
@@ -384,7 +386,7 @@ That’s what good custody feels like:
 - I know recovery is possible without relying on luck or memory.
 - I know there’s a clear plan in place for recovery if I’m not present (this deserves its own dedicated article).
 
-There’s no perfect setup—only tradeoffs. The goal is balance:
+There is no perfect setup, only tradeoffs. The goal is balance:
 
 **Make it hard enough that thieves don’t bother trying — but not so hard that you lock yourself out. Build a setup where the right people can help recover funds if you want them to, and tune the paranoia level to your own risk profile.**
 

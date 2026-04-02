@@ -1,8 +1,8 @@
 ---
 title: The Bitcoin Inheritance Problem - Legal, Technical, and Human
-description: Custody protects your wealth while you're alive. Inheritance planning protects it after. A practical guide to thinking through the legal, technical, and human side of making sure the right people can access everything you've built.
+description: "Custody protects your Bitcoin while you’re alive. Inheritance planning protects it after you’re gone. This is how I think about the legal, technical, and very human problem of making sure the right people can actually recover what you built."
 pubDate: 2026-03-16
-updatedDate: 2026-03-16
+updatedDate: 2026-04-02
 heroImage: ../../assets/blog-inheritance.png
 author: Miro Remias
 draft: false
@@ -14,21 +14,25 @@ tags:
   - self-custody
 ---
 
-There is a specific kind of uncomfortable realization that hits sometime after you finish building a serious custody setup.
+There is a very specific uncomfortable thought that tends to show up after you finish building a serious custody setup.
 
-You have distributed seeds across multiple locations. You have passphrases that live separately from the seeds. You have a wallet descriptor on an encrypted drive. You have thought carefully about correlated failures and jurisdictional risk.
+You have distributed seeds across locations. You have passphrases separated from the seeds. You have a wallet descriptor on an encrypted drive. You have thought about correlated failures, physical risk, and jurisdictional risk.
 
-Then a quieter thought arrives: *if I disappeared today, could my family actually access any of this?*
+And then a quieter question arrives:
 
-For most people who have done serious custody work, the honest answer is: probably not. The setup you built to resist attackers is also — accidentally — pretty good at resisting heirs.
+*If I disappeared today, could my family actually recover any of this?*
 
-This post is about fixing that.
+For most people who have done serious custody work, the honest answer is uncomfortable: probably not.
+
+The setup you built to resist attackers is also, by accident, very good at resisting heirs.
+
+This post is about fixing that problem before it becomes somebody else’s nightmare.
 
 ---
 
 ## What counts as wealth — and why most plans miss half of it
 
-Most people who think about inheritance think about one or two things: a house, maybe a savings account. But wealth is a broader category, and if you are reading this blog you probably have a more complicated picture.
+Most people who think about inheritance think about one or two things: a house, maybe a savings account. But wealth is a broader category, and if you are reading this blog, your picture is probably more complicated than that.
 
 A complete inheritance plan needs to cover financial accounts, property and real estate, business equity, life insurance, digital assets, digital accounts and passwords, and physical valuables. Most people have a plan for some of this. Almost nobody has a plan for all of it.
 
@@ -40,7 +44,7 @@ The most commonly missed pieces are business equity (governance doesn't pause be
 
 A will is important. But it is not a complete inheritance plan.
 
-A few things worth understanding — check with a lawyer in your jurisdiction, this is not legal advice:
+A few things are worth understanding. Check with a lawyer in your jurisdiction; this is not legal advice:
 
 **Forced heirship rules** exist in most of continental Europe and many other jurisdictions. These reserve a portion of the estate for certain heirs — typically children — regardless of what your will says. You cannot simply will everything to a partner and override the claims of your children. The will is valid for the discretionary portion; the protected share flows to protected heirs regardless.
 
@@ -56,7 +60,7 @@ If your holdings are substantial, it is worth exploring how legal structures aff
 
 One approach larger families sometimes use is a family trust or similar structure, where assets are held by a trust entity rather than directly by you. Depending on jurisdiction, this can let family members access assets under defined conditions without triggering the same gift or inheritance tax a direct transfer would.
 
-This deserves its own article — the setup, governance, and compliance requirements are significant. I mention it here because the unmarried partner scenario above is common and the tax consequences genuinely surprise people. If it applies to you, ask a specialist whether a trust structure changes the picture before you finalize anything.
+This deserves its own article. The setup, governance, and compliance requirements are significant. I mention it here because the unmarried partner scenario above is common and the tax consequences genuinely surprise people. If it applies to you, ask a specialist whether a trust structure changes the picture before you finalize anything.
 
 ---
 
@@ -74,13 +78,13 @@ This means everything designed to protect you from attackers is also protecting 
 
 There are tools that help partially — collaborative custody services like Casa (https://casa.io/) and Nunchuk (https://nunchuk.io/) offer built-in inheritance workflows and guided recovery for the Bitcoin layer. Timelocked wallet setups can make a recovery path available to an heir after a period of inactivity, without requiring the owner to manually hand anything over.
 
-These solve the Bitcoin custody layer. They do not solve the instruction set, the other asset categories, or the human problem of whether anyone actually knows what to do.
+These can help with the Bitcoin custody layer. They do not solve the instruction set, the other asset categories, or the human problem of whether anyone actually knows what to do.
 
 ---
 
 ## My approach — how I think about it
 
-The core principle I settled on: my family needs to be able to execute a recovery without me, and without contacting any company or service that might not exist in ten years.
+The core principle I settled on is simple: my family needs to be able to execute a recovery without me, and without contacting any company or service that might not exist in ten years.
 
 That means everything they need is in their hands, physically, in advance.
 
@@ -90,7 +94,7 @@ That means everything they need is in their hands, physically, in advance.
 
 **What the package contains.** How to access the Bitcoin setup, a backup of the password manager covering other accounts and digital assets, documentation on other financial holdings, and contacts for a lawyer and a technical person who understands the setup.
 
-The goal is that a family member in one location can work through their piece independently, without coordinating with anyone else on a tight timeline.
+The goal is that a family member in one location can work through their piece independently, without having to coordinate with everyone else on a tight timeline.
 
 ---
 
@@ -106,7 +110,7 @@ Instructions that are clear to you will be confusing to someone who does not sha
 
 Things worth checking: can they physically locate everything today, without your help? Do they have the decryption credentials they need? Can they follow the steps under real stress — grieving, in a hurry, dealing with other parts of the estate simultaneously? If one location is inaccessible, is there a fallback?
 
-Run it, find the gaps, fix them, run it again with a different person or scenario. Different family members may need instructions tailored to their specific role — the person responsible for Bitcoin access is probably not the same person handling property administration.
+Run it, find the gaps, fix them, then run it again with a different person or scenario. Different family members may need instructions tailored to their specific role. The person responsible for Bitcoin access is probably not the same person handling property administration.
 
 ---
 

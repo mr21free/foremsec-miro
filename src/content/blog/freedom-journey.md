@@ -1,8 +1,8 @@
 ---
 title: Freedom Journey — It Took a Decade to Realize I Was Chasing the Wrong Thing
-description: I followed the default script for years — save, climb, retire at 65. Then I started measuring wealth in time instead of currency, and everything changed. This is the story of that shift.
+description: "I spent years following the default script: study, work, save, retire later. Then I started measuring wealth in time instead of money, and the whole story changed."
 pubDate: 2026-03-24
-updatedDate: 2026-03-24
+updatedDate: 2026-04-02
 heroImage: ../../assets/blog-freedom-journey.png
 author: Miro Remias
 draft: false
@@ -16,21 +16,23 @@ tags:
 
 ## The deathbed question
 
-I asked a close friend once: *What do you want to say about your life when you are dying?*
+I once asked a close friend a question that sounds dramatic, but I meant it seriously:
 
-I expected something ambitious. Something about building technology, reaching millions, leaving a mark on the world.
+*What do you want to be able to say about your life when you are dying?*
+
+I expected something ambitious. Something about scale, impact, building big things, leaving a mark.
 
 His answer was simple:
 
 **"Be a good father, husband, and friend — support people, be present, and do not be in their way."**
 
-That answer broke something in me. Or maybe it fixed something.
+That answer hit me harder than I expected. Maybe it broke something in me. Maybe it fixed something.
 
-Because I had been running a script my whole life — study, get an engineering degree, climb the ladder, save for a house, work until retirement, then enjoy life — and I had never stopped to ask whether the script was actually mine.
+Because I had been following a script for most of my life: study, get the degree, climb the ladder, save for a house, work until retirement, then enjoy life. And I had never really stopped to ask whether the script was even mine.
 
 Maybe purpose is not always about changing the world. Maybe it starts with doing the simple things well. Being present. Taking care of your people. Living in a way you can look back on without regrets.
 
-Because when the last day comes, none of the titles, bonuses, or promotions will matter. The only thing that will matter is the life you actually lived.
+Because when the last day comes, titles, bonuses, and promotions will not matter very much. The thing that will matter is the life you actually lived.
 
 ---
 
@@ -42,7 +44,7 @@ My father showed me something important early: **he never chased the corporate l
 
 So I absorbed the default script: study hard, get a stable job, save, buy a home, retire at 65, then live.
 
-I followed it. I got a degree in electrical engineering with honours. I landed a great job in IT. I started earning real money. I was disciplined — I saved aggressively, spent little, and put in overtime because I genuinely liked the work and wanted to be excellent at it.
+I followed it. I got a degree in electrical engineering with honours. I landed a great job in IT. I started earning real money. I was disciplined. I saved aggressively, spent little, and put in overtime because I genuinely liked the work and wanted to be excellent at it.
 
 On paper, everything was perfect.
 
@@ -55,7 +57,7 @@ But somewhere in my twenties, an idea started circling my head and would not lea
 ![Time, Energy and Money](/images/posts/blog11_different_generations.jpeg)
 > Time, Energy and Money.
 
-I did not want the mid-life trade. I did not want to be the person who says on Monday morning: *"When is Friday?"* — living for weekends like a prisoner living for yard time.
+I did not want the mid-life trade. I did not want to be the person who says on Monday morning, *"When is Friday?"* and lives for weekends like a prisoner lives for yard time.
 
 And I did not want to arrive at 65 exhausted, hoping my health still cooperates.
 
@@ -77,7 +79,7 @@ From that day, I stopped measuring wealth in currency. I started measuring it in
 
 That is what I think real freedom is: not a number in an account, but a number in years.
 
-And those years are not abstract. They are slow mornings with your partner over coffee. An afternoon hike with a friend with nowhere to rush to. Time to pick up your kids from school instead of checking Slack. Hours spent on a project you care about, not because someone assigned it, but because it matters to you. **Wealth is time — and time is the moments you actually get to live.**
+And those years are not abstract. They are slow mornings with your partner over coffee. An afternoon hike with a friend with nowhere to rush to. Time to pick up your kids from school instead of checking Slack. Hours spent on a project you care about, not because someone assigned it, but because it matters to you. **Wealth is time, and time is the moments you actually get to live.**
 
 Most people work because they have to. Bills do not pay themselves. The mortgage is due. The paycheck is survival, not choice.
 
@@ -101,7 +103,7 @@ I was not taught this. Nobody explained inflation, purchasing power, or why "sav
 
 A mentor-figure in my career nudged me toward financial education. He talked about gold, real estate, stocks — and I was completely lost. He recommended a book. I hated reading at the time (the only book I had finished was The Little Prince in high school), but I gave it a try.
 
-That single book cracked open a door. It did not make me an expert, but it gave me a starting point. And one idea stuck: **your money is either working for you, or it is slowly dying.**
+That single book cracked open a door. It did not make me an expert, but it gave me a starting point. And one idea stayed with me: **your money is either working for you, or it is slowly dying.**
 
 ---
 
@@ -115,7 +117,7 @@ The search for something that protects purchasing power took me on a long detour
 
 **Trading and speculation.** Early on, I did what almost everyone does: I focused on short-term gains. I bought, sold the same day for a small profit, and felt like a genius. I took a friend out for dinner and bragged that the meal was "free." Later, when I calculated the real cost of what I had sold to fund that dinner, the number was not small. It was not free at all.
 
-Each of these experiments taught me something. But the biggest lesson was always the same:
+Each of these experiments taught me something. But the biggest lesson kept being the same:
 
 **The big gains are not in the buying and selling. They are in the waiting.**
 
@@ -153,7 +155,7 @@ Once, I needed to withdraw my own savings from a bank. The reaction was hostile 
 
 Another time, after a real estate transaction, a large sum landed in my account. Days later, the account was frozen. No card payments. No transfers. Nothing. I had to provide paperwork and justify my own finances before they unlocked it.
 
-These were not dramatic Hollywood moments. They were quiet, bureaucratic, and deeply unsettling. Because they made one thing clear:
+These were not dramatic Hollywood moments. They were quiet, bureaucratic, and deeply unsettling. That was almost worse, because they made one thing clear:
 
 **Money in a bank is not really your money. It is not yours, and you do not own it.** You have a claim — an IOU from the bank — but you do not have ownership. The moment someone decides you cannot access it, you discover the difference.
 
@@ -199,7 +201,7 @@ Not because you want to be different. But because once you see the default scrip
 
 And the social part is real. People call you crazy. They call it a scam. They look at their own debt, their own quiet stress, and they do not want truth — they want permission to continue.
 
-That does not make them bad people. It makes them human. Truth demands change, and change is hard.
+That does not make them bad people. It makes them human. Truth asks something of you, and that is why change is hard.
 
 ---
 
@@ -231,7 +233,7 @@ Not every financial decision needs to be optimal.
 
 When I had the chance to build something meaningful for my family — a home for my parents in the countryside, a place with space, a garden, fresh air — I took it. It was not the "best" financial move. A spreadsheet optimizer would have told me to put that capital elsewhere.
 
-But my mother's dream was simple: a table big enough for the whole family to eat together at Christmas. Growing up, our place was too small — people ate in shifts during holidays.
+But my mother's dream was simple: a table big enough for the whole family to eat together at Christmas. Growing up, our place was too small, so people ate in shifts during holidays.
 
 So I built something that made sense emotionally, not just financially. My father, an engineer, designed the whole thing himself. It became his project — blueprints, construction oversight, years of purposeful work heading into retirement.
 
@@ -255,7 +257,7 @@ This is one of the hardest parts nobody talks about: **your partner might not ha
 
 What helped: empathy over arguments. Shared goals tied to family dreams. A clear plan with structure: budget, emergency fund, spending rules. Small wins instead of trying to convert overnight.
 
-Sometimes the biggest test of conviction is not the market. It is whether you can keep building while protecting your relationship.
+Sometimes the biggest test of conviction is not the market. It is whether you can keep building without damaging your relationship.
 
 ---
 
@@ -282,7 +284,7 @@ Be reliable. Encourage someone. Teach what you know. Build something useful. Lis
 
 ## The journey is the goal
 
-I am not writing this from a beach, retired and sipping cocktails. I am writing this as someone actively looking for meaningful work — ideally in a place where Bitcoin as a savings tool is the mission, not a footnote.
+I am not writing this from a beach, retired and sipping cocktails. I am writing this as someone actively looking for meaningful work, ideally in a place where Bitcoin as a savings tool is the mission, not a footnote.
 
 Because after living through this entire journey, I now see the full arc clearly. It is not complicated, but each step matters:
 

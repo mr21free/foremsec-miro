@@ -49,15 +49,13 @@ const imageHeight = typeof image === 'string' ? undefined : image?.height;
 		<h3 class="m-0 text-sm 2xl:text-xl text-[color:var(--color-primary)] font-bold uppercase leading-[1.18]">
 			<span class="relative z-10">{title}</span>
 		</h3>
-		{description && <p class="m-0 mt-2 text-xs 2xl:text-lg text-[color-mix(in_srgb,var(--color-primary)_70%,var(--color-text-light)_30%)]">{description}</p>}
-		{baseDate && (
-			<p class="m-0 mt-3 text-xs 2xl:text-lg text-base-600">
-				<time datetime={baseDate.toISOString()}>
+			{description && <p class="m-0 mt-2 text-xs 2xl:text-lg text-[color-mix(in_srgb,var(--color-primary)_70%,var(--color-text-light)_30%)]">{description}</p>}
+			{baseDate && (
+				<p class="m-0 mt-3 text-xs 2xl:text-lg text-base-600">
 					<FormattedDate date={baseDate} />
-				</time>
-			</p>
-		)}
-	</div>
+				</p>
+			)}
+		</div>
 
 	{hasSlot && (
 		<div class="relative z-10 mt-2 pt-2 text-[0.95rem] text-[color-mix(in_srgb,var(--color-primary)_70%,var(--color-text-light)_30%)]">
