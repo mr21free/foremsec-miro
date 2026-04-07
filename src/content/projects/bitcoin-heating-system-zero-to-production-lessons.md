@@ -1,5 +1,5 @@
 ---
-title: Bitcoin Heating System — Product Lessons from Zero to Production
+title: Bitcoin Heating System - Product Lessons from Zero to Production
 description: "I had never taken a hardware product to customers before. This is what happened when we tried to turn a Bitcoin Heating System into a real product, and what it taught me about product strategy, leadership, risk, and learning fast."
 draft: false
 pubDate: 2026-02-24

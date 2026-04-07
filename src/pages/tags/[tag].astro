@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
 import PageLayout from '../../layouts/PageLayout.astro';
+import { getReadingTime } from '../../utils/reading-time';
 import { slugify, withBase } from '../../utils/slugify';
 
 export async function getStaticPaths() {
@@ -35,6 +36,7 @@ const posts = (await getCollection('blog'))
 		href: withBase(`/blog/${post.id}/`),
 		description: post.data.description,
 		date: post.data.pubDate,
+		readingTime: getReadingTime(post.body, (post.body.match(/!\[[^\]]*\]\([^)]+\)/g) || []).length + (post.data.heroImage ? 1 : 0)).text,
 		image: post.data.heroImage,
 		imageAlt: post.data.title,
 		type: 'Blog',
@@ -48,6 +50,7 @@ const projects = (await getCollection('projects'))
 		href: withBase(`/projects/${project.id}/`),
 		description: project.data.description,
 		date: project.data.pubDate,
+		readingTime: getReadingTime(project.body, (project.body.match(/!\[[^\]]*\]\([^)]+\)/g) || []).length + (project.data.heroImage ? 1 : 0)).text,
 		image: project.data.heroImage,
 		imageAlt: project.data.title,
 		type: 'Project',
@@ -86,8 +89,10 @@ const itemCount = items.length;
 								<h2 class="mt-2 text-2xl font-semibold leading-tight text-ink transition duration-200 group-hover:text-[color:var(--color-primary)]">
 									{item.title}
 								</h2>
-								<p class="mt-2 text-sm text-muted">
+								<p class="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-muted">
 									<FormattedDate date={item.date} />
+									{item.readingTime && <span aria-hidden="true">·</span>}
+									{item.readingTime && <span>{item.readingTime}</span>}
 								</p>
 								<p class="mt-4 text-base leading-7 text-muted">
 									{item.description}

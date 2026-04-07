@@ -1,5 +1,5 @@
 ---
-title: I Got Hacked — Here Is What I Changed and Why I Sleep Better Now
+title: I Got Hacked - Here Is What I Changed and Why I Sleep Better Now
 description: "I got hacked and it changed how I think about personal security. This is the framework I built — layered defenses, separated identities, and practical paranoia that works without making daily life unbearable."
 pubDate: 2026-03-25
 updatedDate: 2026-04-02

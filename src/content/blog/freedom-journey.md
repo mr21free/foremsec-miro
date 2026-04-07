@@ -1,5 +1,5 @@
 ---
-title: Freedom Journey — It Took a Decade to Realize I Was Chasing the Wrong Thing
+title: Freedom Journey - It Took a Decade to Realize I Was Chasing the Wrong Thing
 description: "I spent years following the default script: study, work, save, retire later. Then I started measuring wealth in time instead of money, and the whole story changed."
 pubDate: 2026-03-24
 updatedDate: 2026-04-02

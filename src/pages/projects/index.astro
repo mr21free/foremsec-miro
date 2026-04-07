@@ -3,12 +3,20 @@ import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
 import PageLayout from '../../layouts/PageLayout.astro';
+import { getReadingTime } from '../../utils/reading-time';
 
 import { slugify, withBase } from '../../utils/slugify';
 
 const projects = (await getCollection('projects'))
   .filter((post) => post.data.draft !== true)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+function getListReadingTime(entry: { body?: string; data?: { heroImage?: unknown } }) {
+  const body = entry.body ?? '';
+  if (!body) return null;
+  const imageCount = (body.match(/!\[[^\]]*\]\([^)]+\)/g) || []).length + (entry.data?.heroImage ? 1 : 0);
+  return getReadingTime(body, imageCount).text;
+}
 ---
 
 <PageLayout title="Projects" description="Explore case studies and recent builds.">
@@ -24,8 +32,9 @@ const projects = (await getCollection('projects'))
 			<p class="text-muted">No projects published yet.</p>
 		) : (
 			<div class="mx-auto max-w-5xl border-y border-[color:var(--color-border)] divide-y divide-[color:var(--color-border)] pt-6 pb-6">
-				{projects.map((project) => (
-					<article
+				{projects.map((project) => {
+					const readingTime = getListReadingTime(project);
+					return <article
 						class="group relative cursor-pointer py-8 first:pt-0 last:pb-0"
 						data-href={withBase(`/projects/${project.id}/`)}
 						role="link"
@@ -39,8 +48,10 @@ const projects = (await getCollection('projects'))
 								<h2 class="text-2xl font-semibold leading-tight text-ink transition duration-200 group-hover:text-[color:var(--color-primary)]">
 									{project.data.title}
 								</h2>
-								<p class="mt-2 text-sm text-muted">
+								<p class="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-muted">
 									<FormattedDate date={project.data.pubDate} />
+									{readingTime && <span aria-hidden="true">·</span>}
+									{readingTime && <span>{readingTime}</span>}
 								</p>
 								<p class="mt-4 text-base leading-7 text-muted">
 									{project.data.description}
@@ -75,8 +86,8 @@ const projects = (await getCollection('projects'))
 								)}
 							</div>
 						</div>
-					</article>
-				))}
+					</article>;
+				})}
 			</div>
 		)}
 	</section>

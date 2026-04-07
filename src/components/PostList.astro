@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
 import FormattedDate from './FormattedDate.astro';
+import { getReadingTime } from '../utils/reading-time';
 import { withBase } from '../utils/slugify';
 
 interface RawPost {
@@ -12,6 +13,7 @@ interface RawPost {
         description?: string;
         heroImage?: any;
         pubDate?: Date | string;
+        draft?: boolean;
     };
 
     // flattened shape:
@@ -50,11 +52,15 @@ function isDraft(item: RawPost) {
     return p.draft === true;
 }
 
-if (posts.length === 0) {
-    console.warn(
-        '[PostList] No posts provided; fetching from "blog" collection.'
-    );
+function getListReadingTime(item: RawPost) {
+    const body = (item as any).body;
+    const p: any = getPostData(item) || {};
+    if (typeof body !== 'string' || !body) return null;
+    const imageCount = (body.match(/!\[[^\]]*\]\([^)]+\)/g) || []).length + (p.heroImage ? 1 : 0);
+    return getReadingTime(body, imageCount).text;
+}
 
+if (posts.length === 0) {
     const fetched = await getCollection("blog");
 
     posts = posts
@@ -103,6 +109,7 @@ const visiblePosts = typeof limit === "number" ? posts.slice(0, limit) : posts;
                                 ? rawDate
                                 : new Date(rawDate)
                             : null;
+                        const readingTime = getListReadingTime(post);
 
                         return (
                             <article class="group py-2">
@@ -112,8 +119,10 @@ const visiblePosts = typeof limit === "number" ? posts.slice(0, limit) : posts;
                                             {p.title}
                                         </h3>
                                         {pubDate && (
-                                            <p class="mt-2 text-sm text-muted">
+                                            <p class="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-muted">
                                                 <FormattedDate date={pubDate} />
+                                                {readingTime && <span aria-hidden="true">·</span>}
+                                                {readingTime && <span>{readingTime}</span>}
                                             </p>
                                         )}
                                         {p.description && (

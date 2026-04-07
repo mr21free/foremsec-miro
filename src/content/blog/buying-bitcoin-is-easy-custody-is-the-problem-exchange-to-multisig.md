@@ -1,5 +1,5 @@
 ---
-title: Buying Bitcoin is easy. Custody is the problem — from exchange to multisig.
+title: Buying Bitcoin is easy. Custody is the problem - From exchange to multisig.
 description: "Buying Bitcoin is the easy part. Keeping it safe for years is where things get real. This is how I moved from exchanges to cold storage and eventually to 2-of-3 multisig, and what I learned in the process."
 pubDate: 2026-02-11
 updatedDate: 2026-04-02

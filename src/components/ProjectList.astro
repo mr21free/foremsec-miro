@@ -23,6 +23,7 @@
 import { Image } from "astro:assets";
 import { getCollection } from 'astro:content';
 import FormattedDate from './FormattedDate.astro';
+import { getReadingTime } from '../utils/reading-time';
 import { withBase } from '../utils/slugify';
 
 interface RawProject {
@@ -70,12 +71,15 @@ function isDraft(item: RawProject) {
     return p.draft === true;
 }
 
-function isExternal(href?: string) {
-    return typeof href === "string" && /^https?:\/\//i.test(href);
+function getListReadingTime(item: RawProject) {
+    const body = (item as any).body;
+    const p: any = getProjectData(item) || {};
+    if (typeof body !== 'string' || !body) return null;
+    const imageCount = (body.match(/!\[[^\]]*\]\([^)]+\)/g) || []).length + (p.heroImage ? 1 : 0);
+    return getReadingTime(body, imageCount).text;
 }
 
 if (items.length === 0) {
-    console.warn('[ProjectList] No items provided; fetching from "projects" collection.');
     const fetched = await getCollection("projects");
 
     items = items
@@ -112,13 +116,13 @@ const visibleItems = typeof limit === "number" ? items.slice(0, limit) : items;
                         const p = getProjectData(item) || {};
                         const id = (item as any).id;
                         const href = id ? withBase(`/projects/${id}/`) : p.link;
-                        const external = isExternal(href);
                         const rawDate = p.pubDate ?? null;
                         const pubDate = rawDate
                             ? rawDate instanceof Date
                                 ? rawDate
                                 : new Date(rawDate)
                             : null;
+                        const readingTime = getListReadingTime(item);
 
                         return (
                             <article class="group py-2">
@@ -128,8 +132,10 @@ const visibleItems = typeof limit === "number" ? items.slice(0, limit) : items;
                                             {p.title}
                                         </h3>
                                         {pubDate && (
-                                            <p class="mt-2 text-sm text-muted">
+                                            <p class="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-muted">
                                                 <FormattedDate date={pubDate} />
+                                                {readingTime && <span aria-hidden="true">·</span>}
+                                                {readingTime && <span>{readingTime}</span>}
                                             </p>
                                         )}
                                         {p.description && (

@@ -1,5 +1,5 @@
 ---
-title: Bitcoin - the brand nobody built and everybody owns
+title: Bitcoin - The brand nobody built and everybody owns
 description: Bitcoin has no CMO, no central owner, and no marketing budget — yet its symbol is recognized almost everywhere finance touches. A Bitcoiner looks at it through a brand lens.
 pubDate: 2026-04-04
 updatedDate: 2026-04-04
