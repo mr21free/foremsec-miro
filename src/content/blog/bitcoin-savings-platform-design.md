@@ -86,17 +86,29 @@ None of that exists for Bitcoin savings yet. Employer Bitcoin matching programme
 
 ## The North Star
 
-A good north star does one thing: when it moves up, the company earns more money because customers are getting more value. No trade-off. Just alignment.
+A north star should do one thing well: when it moves up, the product is creating more genuine value, and the company earns more because of it. Not revenue from any action. Revenue from the right actions.
 
-For a retail Bitcoin savings product:
+For the savings product, that metric could be:
 
-**Monthly Recurring Savings Volume (MRSV)** — total fiat converted through active recurring purchase plans in the trailing 30 days.
+**Retained Recurring Savings Volume (RRSV)** — total fiat converted through recurring purchase plans that stay active beyond a meaningful retention threshold, measured over 90 days.
 
-When more users activate a recurring plan, MRSV rises. When users stay through a bear market instead of cancelling, MRSV holds. When users increase their contribution, MRSV grows. The platform earns a percentage fee on every transaction in that volume.
+RRSV is stricter than simple volume on purpose. Someone who sets up a plan and cancels after two weeks should not count the same as someone still saving after twelve months. Adding retention to volume keeps the metric honest. It measures durable savings behaviour, not just sign-ups.
 
-It's also a clean prioritisation filter. Any feature that doesn't plausibly move MRSV should wait. One-off purchases don't move it. Sell transactions don't move it. Borrowing doesn't move it. MRSV keeps the product honest about what it's actually building.
+When more users form lasting habits, RRSV rises. When users stay through a bear market instead of quitting, RRSV holds. When users increase their contribution over time, RRSV grows. The platform earns a fee on every transaction in that volume. For the savings product, customer value and business value point in the same direction.
 
-Key supporting diagnostics: time to first recurring plan, month-6 and month-12 retention, cancellation rate during major drawdowns, and contribution expansion rate over time. These tell you why MRSV is moving. MRSV tells you whether any of it matters.
+Worth being honest about what RRSV does not capture.
+
+Selling generates fees. Borrowing can generate margins significantly higher than recurring transaction fees. Private clients and business accounts create real revenue the metric ignores entirely. For a platform that grows meaningfully into those areas, RRSV is the right metric for the savings engine, but not the right north star for the whole company. At that point you need a wider view: savings engine health, customer asset depth, and adjacent revenue streams tracked alongside each other.
+
+The reason RRSV still belongs at the centre of the savings product is not that other revenue does not matter. It is that not all revenue is equally healthy.
+
+A customer who sells after reaching their goal, funding education or making a planned financial move, achieved what they came for. Good revenue and a good outcome. A customer who panic-sells during a 40% drop also generates fees. But that customer failed to do the thing they set out to do. A savings platform that optimises for that revenue is quietly optimising for customer failure. The two look identical in a revenue report and completely different in a product health report.
+
+Borrowing follows the same logic. Commercially important for the right user at the right moment. Worth tracking at company level. Should not redefine the savings product before the core habit-formation problem is solved.
+
+RRSV keeps the savings product honest about what it is actually building.
+
+Key supporting diagnostics: time to first recurring plan, month-3 and month-12 retention, cancellation rate during major drawdowns, and contribution expansion rate. These tell you why RRSV is moving. RRSV tells you whether any of it matters.
 
 ---
 
