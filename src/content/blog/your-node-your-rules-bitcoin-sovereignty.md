@@ -133,7 +133,7 @@ Once you have a full node running and the blockchain locally available, you have
 
 One example: a Bitcoin block clock. Since your node knows the current block height, block time, and network difficulty in real time, you have everything needed to build a local clock that displays Bitcoin protocol time instead of wall time. I built one myself — and then rebuilt it as something more personal:
 
-https://miro.foremsec.com/blog/from-bitcoin-block-clock-to-freedom-clock/
+https://miroremias.com/blog/from-bitcoin-block-clock-to-freedom-clock/
 
 That is one example. The broader point is that a node makes you a first-class participant in the network, with local access to chain data that most people only touch through someone else's API.
 

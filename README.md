@@ -1,6 +1,6 @@
 # Miro Remias Website
 
-Personal website and publishing platform for [https://miro.foremsec.com](https://miro.foremsec.com).
+Personal website and publishing platform for [https://miroremias.com](https://miroremias.com).
 
 Built with Astro and Tailwind CSS. The site includes:
 

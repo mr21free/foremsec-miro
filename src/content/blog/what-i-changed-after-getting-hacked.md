@@ -110,7 +110,7 @@ Cold storage is not about convenience. It is the wall between everything that ca
 
 I covered custody in detail in a previous post:
 
-https://miro.foremsec.com/blog/buying-bitcoin-is-easy-custody-is-the-problem-exchange-to-multisig/
+https://miroremias.com/blog/buying-bitcoin-is-easy-custody-is-the-problem-exchange-to-multisig/
 
 ### Categorize Everything
 
