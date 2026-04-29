@@ -1,8 +1,8 @@
 ---
 title: From Block Clock to Freedom Clock - The Metric That Finally Clicked
-description: "I built a Bitcoin block clock because protocol time fascinated me. Then I rebuilt it into something that made more sense to my actual life: a Freedom Clock that measures runway, saved time, and what Bitcoin is really buying me."
+description: "I built a Bitcoin block clock because protocol time fascinated me. Then I rebuilt it into something that made more sense to my actual life: a Freedom Clock that turns savings into time, shows how much of my remaining life is covered, and reminds me not to waste the time I still have."
 pubDate: 2026-02-12
-updatedDate: 2026-04-02
+updatedDate: 2026-04-29
 heroImage: ../../assets/blog-block-clock.png
 author: Miro Remias
 draft: false
@@ -118,32 +118,36 @@ But a different purpose:
 > **Not “Bitcoin ticks.”**  
 > **“How much freedom have I bought?”**
 
-![Freedom Clock - Short Time](/images/posts/blog8_freedom_clock_short_time-sq.webp)
-> Portfolio value in units of freedom - quite some stacking needs to be done.
+![Freedom Clock - Main Screen](/images/posts/blog8_freedom_clock_screen_1-sq.jpeg)
+> The main screen: expected freedom time, expected lifetime left, and freedom coverage.
 
-![Freedom Clock - Long Time](/images/posts/blog8_freedom_clock_long_time-sq.webp)
-> Much more freedom ahead.
+![Freedom Clock - Details Screen](/images/posts/blog8_freedom_clock_screen_2-sq.jpeg)
+> The second screen: the assumptions behind the number.
 
 
-### What it shows (conceptually)
+### What it shows now
 
-I am keeping the exact implementation private on purpose for OPSEC reasons, but I can share a screenshot with **sample values** (for example, "free time" plus BTC price) to show the idea without exposing anything sensitive.
+The new version is built around **three connected signals**:
 
-The Freedom Clock is built around **one core metric**:
+1. **Expected freedom time:** how long the portfolio could support the chosen lifestyle.
+2. **Expected lifetime left:** a quiet reminder that time itself is limited.
+3. **Freedom coverage:** what percentage of the remaining expected lifetime is covered by the portfolio.
 
-**Runway** — expressed as time.
-
-Not in blocks. Not in fiat. In human units:
+Not in blocks. Not only in fiat. In human units:
 
 - years
 - months
 - weeks
 
-This is basically the question behind FIRE, just stripped down to the core:
+This is basically the question behind FIRE, stripped down to the core:
 
 > “If I stopped earning tomorrow, how long could I keep living the life I want?”
 
-That number is not about flexing. It’s about clarity — and I calculate it *conservatively*: a “typical” monthly spend for my local context, ~2% inflation, worst case (selling all BTC at once), and using only the current BTC price (no assumed upside). Those assumptions are easy to tweak, but the principle matters more than the exact number.
+But the second number changed the product for me.
+
+The device is no longer only about money. It is also a small memento mori on my desk. It reminds me that even if the portfolio keeps growing, the other clock keeps moving too. The goal is not to stare at the number and feel clever. The goal is to ask whether I am using my time well.
+
+The freedom number depends on assumptions: monthly expenses, inflation, portfolio growth, BTC price, life expectancy, and the withdrawal model. That is why the device now has a second screen. The first screen is emotional. The second screen is trust.
 
 It turns Bitcoin from an abstract asset into a **compass**.
 
@@ -151,16 +155,21 @@ It turns Bitcoin from an abstract asset into a **compass**.
 
 Network stats are true. They’re important. They’re also… emotionally neutral for most people.
 
-Runway is different.
+Freedom time is different.
 
-Runway makes you ask:
+It makes you ask:
 
 - “Do I want to trade my next year for this job?”
 - “Is this project worth my time?”
 - “What would I do if I had 6 months more freedom?”
 - “Am I building the life I want *or just surviving until Friday*?”
+- “If I really have this much time left, what am I postponing for no good reason?”
 
-That is why this device finally clicked for me. As a bonus, I showed it to my wife and she understood it immediately, then told me I had finally built something useful instead of just another technical gadget.
+That is why this device finally clicked for me.
+
+I also showed the newer version to my wife, who is not a Bitcoiner. That became a useful test. She understood the core idea immediately: savings converted into time, and life expectancy shown as a second clock. The one label that confused her was “lifetime covered.” She read it as “how much of my life I have already lived,” not “how much of my remaining life is covered by savings.”
+
+That was a good reminder: if the metric needs explaining, the label is wrong. So I changed the wording toward **freedom coverage**.
 
 ---
 
@@ -176,6 +185,8 @@ A Freedom Clock is still a Bitcoin-native project in the ways that matter:
 In other words: it’s still not a consumer gadget. It’s a **habit**.
 
 A reminder on your desk that your attention is valuable. That your time is finite. That you’re building toward something.
+
+The main screen is intentionally simple. It should be readable in one glance. The details screen exists so the main screen can stay calm without hiding the assumptions.
 
 ---
 
@@ -197,21 +208,42 @@ Frequent updates drain battery and steal attention.
 
 For a calm desk device, slow cadence wins.
 
-### 3) Price still has a role (but it’s not the point)
+### 3) Assumptions matter more than precision
 
-I still include price sometimes, not as a signal to act, but as a translator people naturally use today.
+The first versions were more about getting the metric onto the screen.
 
-The Freedom Clock shifts the focus: price becomes secondary to runway and choice.
+The newer version made something obvious: if the number is emotional, the assumptions need to be visible. Otherwise it feels like magic.
+
+So the second screen shows the inputs: BTC amount, BTC price, portfolio growth, inflation, monthly expenses, birth year, life expectancy, and withdrawal mode.
+
+That is not there to make the device feel complicated. It is there to make the main screen believable.
+
+### 4) Price still has a role (but it’s not the point)
+
+I still include price, not as a signal to act, but as a translator people naturally use today.
+
+The Freedom Clock shifts the focus: price becomes secondary to freedom time and choice.
 
 ---
 
 ## Next steps: where this goes from here
 
-I’m thinking about evolving the device into a rotation of views:
+The current version has two screens:
 
-- Bitcoin-native grounding (block height, halving progress in human time)
-- Freedom-native motivation (runway as time, abstracted safely)
-- Builder-native sanity (last update, battery, health)
+- a main screen for expected freedom time, expected lifetime left, and freedom coverage
+- a details screen for the assumptions behind the calculation
+
+That already feels much closer to the product I wanted.
+
+The next step is probably not more data. It is better rhythm.
+
+I want this device to become something you check weekly, not something that pulls you into price anxiety. A useful future view could show how much freedom changed since the last check-in:
+
+- freedom gained or lost since last week
+- time left reduced by another week
+- whether the gap is closing or widening
+
+That would make the device less like a dashboard and more like a ritual.
 
 And I will probably keep iterating on the name too. Right now, **Freedom Clock** is the best fit because it says the quiet part out loud:
 
@@ -232,7 +264,7 @@ Bitcoin isn’t just a network. It’s a tool for *reclaiming your time*.
 
 In *The Courage to Be Disliked*, freedom is framed differently: it starts when you allow yourself to be disliked. Not because you want conflict, but because living honestly means you won’t satisfy everyone’s expectations.
 
-The moment you stop optimizing for approval and start listening to what you truly want from life, you become harder to control — and you begin to feel genuinely free.
+The moment you stop optimizing for approval and start listening to what you truly want from life, you become harder to control, and you begin to feel genuinely free.
 
 ---
 
