@@ -14,6 +14,12 @@ tags:
   - security
 ---
 
+A friend of mine from university died in his early thirties. Unexpected, from one day to the next. He left a wife and a small kid.
+
+He was into crypto, so we tried to help her make sense of what he left behind. We found a notebook. Handwritten passwords, something that looked like a seed phrase. It did not help. We could not tell what it opened, what he held, or whether there was anything at all. Losing money has an end. Wondering does not.
+
+He did write things down. But writing something down and leaving a path your family can follow are two different jobs. I have a wife and kids too. This story is about the second job.
+
 A while ago I wrote about the inheritance problem: I had spent months protecting my assets from attackers, and accidentally protected them from my family too.
 
 That article was the thinking. The full story is here:
@@ -108,6 +114,8 @@ When the moment comes, this is the thing your family opens first. And it opens.
 
 **Keep everything in one place.** My instinct was to split the information into pieces — a note here, a hint there, so that no single document reveals everything. It feels safer. But it only works while I am alive and can point at the pieces. My family would have to find every piece and figure out how they fit together, alone, in the worst week of their lives. They would not. One complete document, protected by encryption instead of by hiding, is something they can actually work with.
 
+**The keys and the map are different things.** Anything that can move money should be scarce. The map should be the opposite: loud. Once the file is encrypted, every extra copy costs nothing and can save your family everything. I hid my map like a key for years and I am still unwinding that habit. Hiding protects keys. Copies protect maps. Encryption lets you do both.
+
 **Trust, but verify.** I told my wife the access password. Several times, over several years. When I finally tested her cold, she did not have it. Not carelessness — humans forget what they never use. So now I verify everything. Run the drill, watch what happens, fix what broke, run it again.
 
 **Being the PM and the user at the same time is tricky.** The user in me kept proposing features. The PM in me had to keep dragging the conversation back to problems. The best feature came from neither — it came from watching. I printed a getting-started questionnaire and handed it to my wife on paper. She ignored the paper and typed her answers straight into the shared family file, private answers and all. I ended up burning the paper version. But that little accident became a feature I would never have designed at a whiteboard: readiness tracking, where her answers live in their own layer and I can include or remove them cleanly. Nobody would have asked for that. It only exists because I watched a real person use the thing.
@@ -123,6 +131,18 @@ The plan is now something I actually maintain, which still feels slightly strang
 Something changes — a new device, a moved document, a new account — I update one entry and export a fresh file. Minutes, not evenings.
 
 The dry runs continue too. Every few months my wife gets the file and a scenario, and I sit on my hands and watch. Every run still finds something small. That is exactly why we run them.
+
+---
+
+## Where this is going
+
+Somewhere between version one and today, the problem got bigger than a document. The question I keep coming back to sounds like an engineering spec, because it is one: how do I build a system where finding any single piece is harmless, losing any single piece is survivable, stolen pieces go stale, authority transfers without me, every dangerous action takes time, and a grieving beginner can still follow the path?
+
+Shorter: no single find helps a thief. No single loss stops an heir. No step requires the dead.
+
+A secret is fragile. A renewable, distributed, time-aware policy survives generations.
+
+OpenFirst answers the last part first, the part that failed my friend's family. The rest is the road ahead.
 
 ---
 
