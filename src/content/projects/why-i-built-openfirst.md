@@ -2,6 +2,7 @@
 title: Why I Built OpenFirst - An Inheritance Plan My Family Can Actually Open
 description: "I wrote a private, offline inheritance plan in plain text files. It was secure, it was durable, and nobody enjoyed using it — including me. This is the story of how that folder of files became OpenFirst, and what building a product for exactly one user taught me about building for everyone."
 pubDate: 2026-07-19
+updatedDate: 2026-07-25
 heroImage: ../../assets/project-openfirst.png
 author: Miro Remias
 draft: false
@@ -24,6 +25,8 @@ This one is about what happened when I sat down to actually fix it.
 Spoiler: it took three versions, one burned piece of paper, and my wife telling me that my beautiful system was unusable. Somewhere along the way it turned into a product called OpenFirst.
 
 https://openfirst.io/
+
+I hope I do not need this plan for a very long time. I am not writing this because I think my time is coming soon — I am writing it because none of us gets to know the day in advance, and that is exactly why the plan has to already exist, not get built after it is too late.
 
 ---
 
