@@ -7,7 +7,7 @@ const projects = await getCollection('projects');
 const slugify = (value: string) => value.toLowerCase().replace(/\s+/g, '-');
 
 const tagCounts = new Map<string, number>();
-	[...posts, ...projects].forEach((entry) => {
+	[...posts, ...projects].filter((entry) => entry.data.unlisted !== true).forEach((entry) => {
 	(entry.data.tags ?? []).forEach((tag) => {
 		tagCounts.set(tag, (tagCounts.get(tag) ?? 0) + 1);
 	});

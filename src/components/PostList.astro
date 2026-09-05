@@ -49,7 +49,7 @@ function getPostData(item: RawPost) {
 
 function isDraft(item: RawPost) {
     const p: any = getPostData(item) || {};
-    return p.draft === true;
+    return p.draft === true || p.unlisted === true;
 }
 
 function getListReadingTime(item: RawPost) {

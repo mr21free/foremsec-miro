@@ -22,7 +22,7 @@ const allProjects = await getCollection('projects');
 const currentTags = new Set((project.data.tags ?? []).map((tag) => tag.toLowerCase()));
 
 const relatedItems = allProjects
-	.filter((item) => item.id !== project.id && item.data.draft !== true)
+	.filter((item) => item.id !== project.id && item.data.draft !== true && item.data.unlisted !== true)
 	.map((item) => {
 		const sharedTagCount = (item.data.tags ?? []).filter((tag) =>
 			currentTags.has(tag.toLowerCase()),

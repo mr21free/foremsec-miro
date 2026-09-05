@@ -11,7 +11,7 @@ export async function getStaticPaths() {
 	const projects = await getCollection('projects');
 	const tags = new Map<string, string>();
 
-	[...posts, ...projects].forEach((entry) => {
+	[...posts, ...projects].filter((entry) => entry.data.unlisted !== true).forEach((entry) => {
 		(entry.data.tags ?? []).forEach((tag) => {
 			tags.set(slugify(tag), tag);
 		});
@@ -30,7 +30,7 @@ interface Props {
 const { tagLabel } = Astro.props as Props;
 const tagParam = Astro.params.tag ?? '';
 const posts = (await getCollection('blog'))
-	.filter((post) => (post.data.tags ?? []).some((tag) => slugify(tag) === tagParam))
+	.filter((post) => post.data.unlisted !== true && (post.data.tags ?? []).some((tag) => slugify(tag) === tagParam))
 	.map((post) => ({
 		title: post.data.title,
 		href: withBase(`/blog/${post.id}/`),
@@ -44,7 +44,7 @@ const posts = (await getCollection('blog'))
 	}));
 
 const projects = (await getCollection('projects'))
-	.filter((project) => (project.data.tags ?? []).some((tag) => slugify(tag) === tagParam))
+	.filter((project) => project.data.unlisted !== true && (project.data.tags ?? []).some((tag) => slugify(tag) === tagParam))
 	.map((project) => ({
 		title: project.data.title,
 		href: withBase(`/projects/${project.id}/`),

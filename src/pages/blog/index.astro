@@ -8,7 +8,7 @@ import { getReadingTime } from '../../utils/reading-time';
 import { slugify, withBase } from '../../utils/slugify';
 
 const posts = (await getCollection('blog'))
-  .filter((post) => post.data.draft !== true)
+  .filter((post) => post.data.draft !== true && post.data.unlisted !== true)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 function getListReadingTime(entry: { body?: string; data?: { heroImage?: unknown } }) {

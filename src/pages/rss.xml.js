@@ -6,10 +6,10 @@ export async function GET(context) {
   const site = await getSite();
 
   const blogPosts = (await getCollection("blog"))
-    .filter((p) => p.data.draft !== true);
+    .filter((p) => p.data.draft !== true && p.data.unlisted !== true);
 
   const projects = (await getCollection("projects"))
-    .filter((p) => p.data.draft !== true);
+    .filter((p) => p.data.draft !== true && p.data.unlisted !== true);
 
   const items = [
     ...blogPosts.map((post) => ({

@@ -68,7 +68,7 @@ function getProjectData(item: RawProject) {
 
 function isDraft(item: RawProject) {
     const p: any = getProjectData(item) || {};
-    return p.draft === true;
+    return p.draft === true || p.unlisted === true;
 }
 
 function getListReadingTime(item: RawProject) {
