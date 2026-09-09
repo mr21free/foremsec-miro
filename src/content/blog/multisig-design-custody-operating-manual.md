@@ -5,7 +5,7 @@ pubDate: 2026-09-02
 heroImage: ../../assets/blog-custody-operating-manual.png
 author: Miro Remias
 draft: false
-unlisted: true
+unlisted: false
 tags:
   - bitcoin
   - self-custody
